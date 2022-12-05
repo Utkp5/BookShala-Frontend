@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  .App {
+    background-color: lightgreen;
+    height: 100vh;
+  }
+  
+  .logo {
+    font-size: 20px;
+  }
+  .navbar {
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 75px;
+  }
+  
+  .navbar_ul {
+    list-style: none;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    width: 70vw;
+  }
+  li {
+    padding: 0px 10px;
+    margin: 0px 10px;
+  }
+  li a {
+    text-decoration: none;
+    color: ghostwhite;
+    font-size: larger;
+  }
+  li button {
+    padding: 6px 14px;
+    font-size: larger;
+    outline: none;
+    border: 2px solid crimson;
+    background: crimson;
+    border-radius: 7px;
+  }
+  .menu_icon {
+    display: none;
+  }
+  
+  @media screen and (max-width: 800px) {
+    .logo {
+      display: flex;
+      position: absolute;
+      top: 25px;
+      left: 25px;
+    }
+    .navbar_ul {
+      display: none;
+    }
+    .navbar_mobile_css {
+      position: absolute;
+      display: block;
+      background-color: #242424;
+      list-style: none;
+      left: 0;
+      top: 75px;
+      /* animation: slider 1s 1 forward ease-in; */
+      animation-name: slider;
+      animation-duration: 1s;
+      animation-fill-mode: forwards;
+      width: 100%;
+    }
+    @keyframes slider {
+      from {
+        transform: translateY(-15px)
+      }
+      to {
+        transform: translateY(0px);
+      }
+    }
+    li {
+      padding: 3vh 42vw;
+    }
+    .button_signup {
+      margin: 0vh -2vw;
+    }
+    .button_login {
+      margin: 0vh -1vw;
+    }
+    .menu_icon {
+      display: block;
+      position: absolute;
+      top: 15px;
+      right: 25px;
+      transition: all 0.5s ease-in-out;
+    }
+  }
+  

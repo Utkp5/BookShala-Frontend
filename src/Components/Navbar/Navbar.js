@@ -17,9 +17,10 @@ function App() {
 
               <ul className={menu ? 'navbar_mobile_css' :  'navbar_ul'}>
                 <li><a href="">Home</a></li>
-                <li><a href="">About</a></li>
+                <li><a href="">About Us</a></li>
+                <li><a href="">Blog</a></li>
+                <li><a href="">Shop</a></li>
                 <li><a href="">Contact</a></li>
-                <li><a href="">Movies</a></li>
                 <li><button className='button_signup'>Signup</button></li>
                 <li><button className='button_login'>Login</button></li>
               </ul>
@@ -27,7 +28,7 @@ function App() {
                     {menu ? <HiX size={46} /> :<HiMenu size={46} />}
               </div>
 
-       </div>
+        </div>
 
     </div>
   );

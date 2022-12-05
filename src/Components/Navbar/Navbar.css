@@ -2,16 +2,12 @@
     margin: 0;
     padding: 0;
   }
-  .App {
-    background-color: lightgreen;
-    height: 100vh;
-  }
   
   .logo {
     font-size: 20px;
   }
   .navbar {
-    background-color: black;
+    background-color:  #00B8A9; 
     color: white;
     display: flex;
     justify-content: space-around;
@@ -32,16 +28,27 @@
   }
   li a {
     text-decoration: none;
-    color: ghostwhite;
+    color: #F9FFEA;
     font-size: larger;
+    font-weight: 500;
   }
   li button {
     padding: 6px 14px;
+    font-weight: 500;
     font-size: larger;
     outline: none;
-    border: 2px solid crimson;
-    background: crimson;
+    color: #F8F3D4;
+    cursor: pointer;
+    border: 2px solid #F6416C;
+    background: #F6416C;
     border-radius: 7px;
+}
+button:hover
+   {
+    /* box-shadow: 3px 4px 7px 0px black; */
+    box-shadow: 1px 2px 2px 2px grey;
+    transform: scale(1);
+    transition: all 0.2s;
   }
   .menu_icon {
     display: none;

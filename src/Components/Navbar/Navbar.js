@@ -25,7 +25,7 @@ function App() {
                 <li><a href="">Shop</a></li>
                 <li><a href="">Contact</a></li>
                 <li><button className='button_signup'>Signup</button></li>
-                <li><button className='button_login'>Login</button></li>
+                <li><button className='button_login'>Signin</button></li>
               </ul>
               <div className='menu_icon' onClick={() => setmenu(!menu)}>
                     {menu ? <HiX size={46} /> :<HiMenu size={46} />}

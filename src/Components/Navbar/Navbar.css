@@ -31,13 +31,18 @@
     color: #F9FFEA;
     font-size: larger;
     font-weight: 500;
+    padding: 4px 12px;
+  }
+  li a:hover
+  {
+    color: lightblue;
   }
   li button {
     padding: 6px 14px;
     font-weight: 500;
     font-size: larger;
     outline: none;
-    color: #F8F3D4;
+    color: #F9FFEA;
     cursor: pointer;
     border: 2px solid #F6416C;
     background: #F6416C;
@@ -49,6 +54,15 @@ button:hover
     box-shadow: 1px 2px 2px 2px grey;
     transform: scale(1);
     transition: all 0.2s;
+  }
+  /* li a:not(.active) {  
+
+    background-color: coral;
+  } */
+  
+  li a:focus {
+    background-color: #100202cc;
+    border-radius: 4px;
   }
   .menu_icon {
     display: none;

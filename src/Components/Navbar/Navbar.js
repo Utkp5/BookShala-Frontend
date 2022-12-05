@@ -2,6 +2,7 @@ import { HiMenu } from "react-icons/hi";
 import { HiX } from "react-icons/hi";
 import { useState } from 'react';
 import logo from "../../images/logo.png"
+import { NavLink } from "react-router-dom";
 import './Navbar.css';
 
 
@@ -19,11 +20,11 @@ function App() {
 
 
               <ul className={menu ? 'navbar_mobile_css' :  'navbar_ul'}>
-                <li><a href="">Home</a></li>
-                <li><a href="">About</a></li>
-                <li><a href="">Blog</a></li>
-                <li><a href="">Shop</a></li>
-                <li><a href="">Contact</a></li>
+                <li><NavLink  to ="/">       Home   </NavLink></li>
+                <li><NavLink  to ="/About">  About  </NavLink></li>
+                <li><NavLink  to ="/Blog">   Blog   </NavLink></li>
+                <li><NavLink  to ="/Shop">   Shop   </NavLink></li>
+                <li><NavLink  to ="/Contact">Contact</NavLink></li>
                 <li><button className='button_signup'>Signup</button></li>
                 <li><button className='button_login'>Signin</button></li>
               </ul>

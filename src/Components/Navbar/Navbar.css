@@ -4,7 +4,7 @@
   }
   
   .logo {
-    font-size: 20px;
+    width: 210px;
   }
   .navbar {
     background-color:  #00B8A9; 
@@ -31,7 +31,7 @@
     color: #F9FFEA;
     font-size: larger;
     font-weight: 500;
-    padding: 4px 12px;
+    padding: 4px 10px;
   }
   li a:hover
   {

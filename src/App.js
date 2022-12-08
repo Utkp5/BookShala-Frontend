@@ -5,6 +5,7 @@ import About from "./Components/About/About"
 import Blog from "./Components/Blog/Blog"
 import Shop from "./Components/Shop/Shop"
 import Contact from "./Components/Contact/Contact"
+import Cart from "./Components/Cart/Cart";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route exact path="/Blog" element={<Blog />} />
         <Route exact path="/Shop" element={<Shop />} />
         <Route exact path="/Contact" element={<Contact />} />
+        <Route exact path="/Cart" element={<Cart />} />
       </Routes>
     </Router>
   );

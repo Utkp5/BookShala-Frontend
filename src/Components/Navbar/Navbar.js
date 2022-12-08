@@ -1,5 +1,6 @@
 import { HiMenu } from "react-icons/hi";
 import { HiX } from "react-icons/hi";
+import { HiShoppingCart } from "react-icons/hi";
 import { useState } from 'react';
 import logo from "../../images/logo.png"
 import { NavLink } from "react-router-dom";
@@ -27,6 +28,7 @@ function App() {
                 <li><NavLink  to ="/Contact">Contact</NavLink></li>
                 <li><button className='button_signup'>Signup</button></li>
                 <li><button className='button_login'>Signin</button></li>
+                <NavLink to ="/Cart"><HiShoppingCart size={32} color="#F9FFEA" className="cartIcon"/></NavLink>
               </ul>
               <div className='menu_icon' onClick={() => setmenu(!menu)}>
                     {menu ? <HiX size={46} /> :<HiMenu size={46} />}

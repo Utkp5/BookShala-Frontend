@@ -4,7 +4,7 @@
   }
   
   .logo {
-    width: 210px;
+    width: 200px;
   }
   .navbar {
     background-color:  #00B8A9; 
@@ -66,6 +66,10 @@ button:hover
   }
   .menu_icon {
     display: none;
+  }
+  .cartIcon
+  {
+    margin-right: 18px;
   }
   
   @media screen and (max-width: 900px) {

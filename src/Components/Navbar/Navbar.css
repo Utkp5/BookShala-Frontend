@@ -23,7 +23,7 @@
     /* width: 70vw; */
   }
   li {
-    padding: 0px 10px;
+    padding: 4px 10px;
     margin: 0px 10px;
   }
   li a {
@@ -37,7 +37,7 @@
   {
     color: lightblue;
   }
-  li button {
+   button {
     padding: 6px 14px;
     font-weight: 500;
     font-size: larger;
@@ -55,15 +55,24 @@ button:hover
     transform: scale(1);
     transition: all 0.2s;
   }
-  /* li a:not(.active) {  
 
-    background-color: coral;
-  } */
+  .hover_li {
+    background-image:linear-gradient(black,rgb(51, 49, 49));
+    background-repeat: no-repeat;
+    background-size: 0% 100%;
+    background-position-x: right;
+    transition: background-size 500ms;
+  }
+  .hover_li:hover
+  {
+    background-size: 100% 100%;
+    background-position-x: left;
+  }
   
-  li a:focus {
+  /* li a:focus {
     background-color: #100202cc;
     border-radius: 4px;
-  }
+  } */
   .menu_icon {
     display: none;
   }

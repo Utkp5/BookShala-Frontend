@@ -21,11 +21,11 @@ function App() {
 
 
               <ul className={menu ? 'navbar_mobile_css' :  'navbar_ul'}>
-                <li><NavLink  to ="/">       Home   </NavLink></li>
-                <li><NavLink  to ="/About">  About  </NavLink></li>
-                <li><NavLink  to ="/Blog">   Blog   </NavLink></li>
-                <li><NavLink  to ="/Shop">   Shop   </NavLink></li>
-                <li><NavLink  to ="/Contact">Contact</NavLink></li>
+                <li className="hover_li"><NavLink  to ="/">       Home   </NavLink></li>
+                <li className="hover_li"><NavLink  to ="/About">  About  </NavLink></li>
+                <li className="hover_li"><NavLink  to ="/Blog">   Blog   </NavLink></li>
+                <li className="hover_li"><NavLink  to ="/Shop">   Shop   </NavLink></li>
+                <li className="hover_li"><NavLink  to ="/Contact">Contact</NavLink></li>
                 <li><button className='button_signup'>Signup</button></li>
                 <li><button className='button_login'>Signin</button></li>
                 <NavLink to ="/Cart"><HiShoppingCart size={32} color="#F9FFEA" className="cartIcon"/></NavLink>

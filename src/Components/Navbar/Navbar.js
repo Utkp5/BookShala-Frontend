@@ -26,8 +26,8 @@ function App() {
                 <li className="hover_li"><NavLink  to ="/Blog">   Blog   </NavLink></li>
                 <li className="hover_li"><NavLink  to ="/Shop">   Shop   </NavLink></li>
                 <li className="hover_li"><NavLink  to ="/Contact">Contact</NavLink></li>
-                <li><button className='button_signup'>Signup</button></li>
-                <li><button className='button_login'>Signin</button></li>
+                <li><NavLink to="/Signup"><button className='button_signup'>Signup</button></NavLink></li>
+                <li><NavLink to="/Signin"><button className='button_login'>Signin</button></NavLink></li>
                 <NavLink to ="/Cart"><HiShoppingCart size={32} color="#F9FFEA" className="cartIcon"/></NavLink>
               </ul>
               <div className='menu_icon' onClick={() => setmenu(!menu)}>

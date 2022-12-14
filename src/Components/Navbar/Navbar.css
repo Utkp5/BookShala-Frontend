@@ -38,9 +38,9 @@
     color: lightblue;
   }
    button {
-    padding: 6px 14px;
+    padding: 6px 10px;
     font-weight: 500;
-    font-size: larger;
+    font-size: large;
     outline: none;
     color: #F9FFEA;
     cursor: pointer;
@@ -121,7 +121,7 @@ button:hover
       }
     }
     li {
-      padding: 3vh 42vw;
+      padding: 3vh 32vw;
       animation-name: slider1;
       animation-duration: 1.1s;
       animation-fill-mode: fo

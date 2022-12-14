@@ -6,6 +6,8 @@ import Blog from "./Components/Blog/Blog"
 import Shop from "./Components/Shop/Shop"
 import Contact from "./Components/Contact/Contact"
 import Cart from "./Components/Cart/Cart";
+import Signup from "./Components/Signup/Signup";
+import Signin from "./Components/Signin/Signin";
 
 function App() {
   return (
@@ -17,6 +19,8 @@ function App() {
         <Route exact path="/Shop" element={<Shop />} />
         <Route exact path="/Contact" element={<Contact />} />
         <Route exact path="/Cart" element={<Cart />} />
+        <Route exact path="/Signup" element={<Signup />} />
+        <Route exact path="/Signin" element={<Signin />} />
       </Routes>
     </Router>
   );

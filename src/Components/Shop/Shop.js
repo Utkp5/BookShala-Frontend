@@ -1,11 +1,12 @@
-import React from 'react'
+import React from "react";
+import Navbar from "../Navbar/Navbar";
 
 function Shop() {
   return (
     <div>
-      Shop page
+      <Navbar />
     </div>
-  )
+  );
 }
 
-export default Shop
+export default Shop;

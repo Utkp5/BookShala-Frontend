@@ -37,7 +37,7 @@
   {
     color: lightblue;
   }
-   button {
+  .button_signup,.button_login{
     padding: 6px 10px;
     font-weight: 500;
     font-size: large;
@@ -48,7 +48,7 @@
     background: #F6416C;
     border-radius: 7px;
 }
-button:hover
+.button_signup:hover , .button_login:hover
    {
     /* box-shadow: 3px 4px 7px 0px black; */
     box-shadow: 1px 2px 2px 2px grey;

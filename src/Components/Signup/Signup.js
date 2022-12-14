@@ -1,33 +1,36 @@
 import React from "react";
 import "./Signup.css";
+import Navbar from "../Navbar/Navbar";
+import gif from "../../Images/signupGif.gif";
+import { NavLink } from "react-router-dom";
 
 function Signup() {
   return (
     <div>
-      <div class="parent clearfix">
-        <div class="bg-illustration">
-          <img src="https://i.ibb.co/Pcg0Pk1/logo.png" alt="logo" />
-          <div class="burger-btn">
-            <span></span>
-            <span></span>
-            <span></span>
+      <Navbar />
+      <div class="parent">
+      <div>
+        <img src={gif} alt="logo" className="signup_gif" />
+      </div>
+      <div class="login">
+        <h3 id="sgn_h3">Create Account</h3>
+        <div className="signupform">
+          <input className="input_signup" type="text" placeholder="First Name"/>
+          <input className="input_signup" id="input_signup" type="text" placeholder="Last Name" />
+          <br />
+          <input className="input_signup" type="email" placeholder="E-mail Address"/>
+          <br />
+          <input className="input_signup" type="password" placeholder="Password"/>
+          <br />
+          <input className="input_signup" type="password" placeholder="Confirm Password"/>
+          <div class="remember_form">
+            <span><input type="checkbox" /> &nbsp;Remember me</span>
+            <span>You are creating an account, and agree to Bookshala <NavLink className="sgn_navlink">Terms of Service</NavLink> and <NavLink className="sgn_navlink">Privacy Policy</NavLink></span>
           </div>
-        </div>
-        <div class="login">
-          <div class="container">
-            <h1>Login to access to<br />your account</h1>
-            <div class="login-form">
-              <form>
-                <input type="email" placeholder="E-mail Address" />
-                <input type="password" placeholder="Password" />
-                <div class="remember-form"><input type="checkbox" /><span>Remember me</span></div>
-                <div class="forget-pass"><a href="#">Forgot Password ?</a></div>
-                <button type="submit">LOG-IN</button>
-              </form>
-            </div>
-          </div>
+          <button type="submit" className="signup_btn">Sign up</button>
         </div>
       </div>
+    </div>
     </div>
   );
 }

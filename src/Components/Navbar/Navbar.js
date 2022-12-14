@@ -2,7 +2,7 @@ import { HiMenu } from "react-icons/hi";
 import { HiX } from "react-icons/hi";
 import { HiShoppingCart } from "react-icons/hi";
 import { useState } from 'react';
-import logo from "../../images/logo.png"
+import logo from "../../Images/logo.png"
 import { NavLink } from "react-router-dom";
 import './Navbar.css';
 

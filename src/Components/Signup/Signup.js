@@ -1,7 +1,7 @@
 import React from "react";
 import "./Signup.css";
 import Navbar from "../Navbar/Navbar";
-import gif from "../../Images/signupGif.gif";
+// import gif from "../../Images/signupGif.gif";
 import { NavLink } from "react-router-dom";
 
 function Signup() {
@@ -10,7 +10,6 @@ function Signup() {
       <Navbar />
       <div class="parent">
       <div>
-        <img src={gif} alt="logo" className="signup_gif" />
       </div>
       <div class="login">
         <h3 id="sgn_h3">Create Account</h3>

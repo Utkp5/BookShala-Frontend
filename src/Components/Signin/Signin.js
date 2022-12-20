@@ -20,7 +20,7 @@ function Signin() {
           <div class="remember_form">
             <NavLink to="/Forgotpassword" className="signin_nav">Forgot Password ?</NavLink>            
           </div>
-          <button type="submit" className="signup_btn">Log in</button>
+          <button type="submit" className="signin_btn">Log in</button>
         </div>
         </div>
       </div>

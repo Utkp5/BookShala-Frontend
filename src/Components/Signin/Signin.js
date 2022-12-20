@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "../Navbar/Navbar";
 import "./Signin.css"
-import img2 from "../../Images/img2.jpg"
+// import img2 from "../../Images/img2.jpg"
 import { NavLink } from "react-router-dom";
 
 function Signin() {
@@ -9,7 +9,6 @@ function Signin() {
     <div>
       <Navbar />
       <div class="parent1">
-          <img src={img2} alt="logo" className="signin_gif"/>
         <div class="login1">
           <h2 id="sgnin_h3">Hey Welcome Back 👋</h2><br />
           <p>Enter The Information You Entered while Registering!</p>

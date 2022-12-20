@@ -1,0 +1,13 @@
+.Home_banner_div
+{
+    border: 2px solid;
+    background-image: url(../../Assets/Banners/banner-bg.jpg);
+    background-repeat: no-repeat;
+    height: 500px;
+ 
+}
+.Home_stand
+{
+    width: 44%;
+    
+}

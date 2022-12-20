@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Contact.css";
-import cont_banner from "../../Images/contct_banner.jpg";
-import cont_img from "../../Images/contact-img.png";
+import cont_banner from "../../Assets/Banners/contct_banner.jpg";
+import cont_img from "../../Assets/Images/contact-img.png";
 import { FiArrowUpRight } from "react-icons/fi";
 import Navbar from "../Navbar/Navbar";
 

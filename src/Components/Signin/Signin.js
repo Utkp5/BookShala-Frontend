@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "../Navbar/Navbar";
 import "./Signin.css"
-import img2 from "../../Images/img2.jpg"
+import img2 from "../../Assets/Images/img2.jpg"
 import { NavLink } from "react-router-dom";
 
 function Signin() {

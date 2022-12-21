@@ -18,11 +18,11 @@ import "swiper/css/navigation";
 import "./Slider_home.css";
 
 // import required modules
-import { Pagination, Navigation } from "swiper";
+import { Autoplay, Pagination, Navigation } from "swiper";
 
 export default function App() {
   return (
-    <div>
+    <div className="home_slider">
       <Swiper
         slidesPerView={3}
         spaceBetween={30}
@@ -37,7 +37,7 @@ export default function App() {
           disableOnInteraction: false,
         }}
         navigation={true}
-        modules={[Pagination, Navigation]}
+        modules={[Autoplay, Pagination, Navigation]}
         className="mySwiper"
       >
         <SwiperSlide><img src={book_1} alt="" className="slider_homeimg"/></SwiperSlide>

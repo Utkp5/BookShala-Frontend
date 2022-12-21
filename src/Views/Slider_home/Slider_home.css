@@ -4,7 +4,7 @@
 }
 .swiper
 {
-    margin-left: 14%;
+    margin-left: 22%;
     margin-right: 40%;
     position: relative;
     overflow: hidden;
@@ -12,10 +12,13 @@
     padding: 0;
     z-index: 1;
     /* border: 1px solid; */
-    bottom: 345px;
-    left: 490px;
+    bottom: 0px;
+    left: 450px;
 }
 .swiper-button-next, .swiper-button-prev, .swiper-pagination
 {
     display: none;
+}
+.home_slider{ position: relative; bottom: 306px;
+    height: 0%;
 }

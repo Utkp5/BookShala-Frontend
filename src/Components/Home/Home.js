@@ -17,8 +17,8 @@ function Home() {
           </div>
           <img src={stand} alt="" className="Home_stand" />
         </div>
+        <Slider_home />
       </div>
-      <Slider_home />
     </div>
   );
 }

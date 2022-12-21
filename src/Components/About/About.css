@@ -1,0 +1,21 @@
+.about_bg
+{
+    background-image: url(../../Assets/Banners/about-banner-bg.png);
+    height: 250px;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.5;
+    filter: brightness(0.4);
+    background-size: cover;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 0;
+    padding: 0 60px;
+}
+.about_bg_div
+{
+    font-size: xx-large;
+    color: black;
+    font-weight: 700;
+}

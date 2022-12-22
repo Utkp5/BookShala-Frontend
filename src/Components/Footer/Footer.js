@@ -68,7 +68,7 @@ function Footer() {
       <hr/>
 
       <div className='footer_social_div'>
-        <div><p >&copy; Copyright Bookshala pvt.</p></div>
+        <div><p >&copy; Copyright 2023 Bookshala pvt.</p></div>
         <div className='footer_social'>
             <NavLink><SlSocialLinkedin size={26} fill="black"/></NavLink>
             <NavLink><SlSocialDribbble size={26} fill="black"/></NavLink>

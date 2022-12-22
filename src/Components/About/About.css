@@ -4,7 +4,7 @@
     height: 250px;
     background-position: center;
     background-repeat: no-repeat;
-    opacity: 0.5;
+    background-attachment: fixed;
     filter: brightness(0.4);
     background-size: cover;
     display: flex;
@@ -12,10 +12,11 @@
     align-items: center;
     z-index: 0;
     padding: 0 60px;
+    position: relative;
 }
 .about_bg_div
 {
     font-size: xx-large;
-    color: black;
+    color: white;
     font-weight: 700;
 }

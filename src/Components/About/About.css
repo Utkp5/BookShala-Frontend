@@ -20,3 +20,129 @@
     color: white;
     font-weight: 700;
 }
+
+/* cont1 */
+.about_cont1
+{
+position: relative;
+}
+.about_cont1, .about_cont1_img
+{
+    width: 100%;
+    height: auto;
+}
+.about_cont1_flex{
+    display: flex;
+    align-items: flex-start;
+}
+.about_cont1_sub
+{
+    position: absolute;
+    top: 0;
+    display: flex;
+}
+.about_cont1_img1
+{
+    width: 340px;
+    border-radius: 12px;
+}
+.about_cont1_img2
+{
+    width: 320px;
+    border-radius: 12px;
+}
+.about_cont1_h2
+{
+    margin-bottom: 20px;
+    font-size: xxx-large;
+    color: darkblue;
+}
+.about_cont1_p
+{
+    font-size: larger;
+    color: darkgrey;
+}
+.about_cont1_div2
+{
+    margin-top: 100px;
+    margin-left: 50px;
+}
+
+/* cont2 */
+.about_cont2
+{
+    position: relative;
+}
+.about_cont2_sub
+{
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    justify-content: space-evenly;
+    height: 400px;
+    width: 850px;
+}
+.about_cont2_btn
+{
+    font-size: larger;
+    padding: 10px 20px;
+    background: darkgray;
+    color: dimgray;
+    border: none;
+}
+.about_cont2_btn1
+{
+    padding: 14px 23px 14px 23px;
+    font-family: "Jost", Sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    background-color: #F18E7D;
+    color: #FFFFFF;
+    margin-top: 9px;
+    border: none;
+    border-radius: 6px;
+}
+.about_cont2_img1
+{
+    width: 360px;
+    border-radius: 12px;
+}
+.about_cont2_img
+{
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+    background: linear-gradient(90deg,#0c151a,rgba(0,0,0,.69));
+    background-attachment: fixed;
+    background-image: url(https://demo2.pavothemes.com/bookory/wp-content/uploads/2022/02/h1-bg2.jpg);
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-filter: brightness(.2);
+    filter: brightness(.2);
+    height: 65vh;
+    padding: 100px 0 80px;
+    position: relative;
+}
+.about_cont2_absolute
+{
+    position: absolute;
+    top: 0;
+    left: 50px;
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    color: ghostwhite;
+}
+.about_cont2_h3{
+    font-size: xxx-large;
+}
+.about_cont2_p{
+    width: 477px;
+    font-size: x-large;
+    margin: 11px 0px;
+}
+.about_cont2_p1{
+        width: 695px;
+        font-size: large;
+}

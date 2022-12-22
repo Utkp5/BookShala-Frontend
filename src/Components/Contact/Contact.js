@@ -4,7 +4,7 @@ import cont_banner from "../../Assets/Banners/contct_banner.jpg";
 import cont_img from "../../Assets/Images/contact-img.png";
 import { FiArrowUpRight } from "react-icons/fi";
 import Navbar from "../Navbar/Navbar";
-
+import Footer from "../Footer/Footer"
 
 function Contact() {
 
@@ -37,12 +37,9 @@ function Contact() {
         </div>
       </div>
 
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d55967.15395002581!2d77.1613460691301!3d28.75099568801322!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d01d4f896099f%3A0xd856071fa2f0c441!2sBurari%2C%20Delhi%2C%20110084!5e0!3m2!1sen!2sin!4v1671101125301!5m2!1sen!2sin" 
-      width="100%" height="350" style={{border : 0}} 
-      allowFullScreen="" 
-      loading="lazy" 
-      referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d55967.15395002581!2d77.1613460691301!3d28.75099568801322!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d01d4f896099f%3A0xd856071fa2f0c441!2sBurari%2C%20Delhi%2C%20110084!5e0!3m2!1sen!2sin!4v1671101125301!5m2!1sen!2sin"       width="100%" height="350" style={{border : 0}} allowFullScreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
+      <Footer />
     </div>
   );
 }

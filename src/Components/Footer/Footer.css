@@ -90,7 +90,6 @@ hr
 }
 .madewithlove
 {
-    border: 1px solid;
     text-align: center;
     font-size: larger;
     margin-top: 15px;
@@ -100,18 +99,18 @@ hr
 }
 #heart
 {
-    animation: heart infinite;
+    animation: heart 1s infinite linear;
 }
 
 @keyframes heart {
     from
     {
-        transform: scale3d(0);
-        transition: all 0.5s;
+        transform: scale(0.5);
+        transition: all ease-in-out;
     }
     to
     {
-        transform: scale3d(1);
-        transition: all 0.7s;
+        transform: scale(1);
+        transition: all ease-in-out;
     }
 }

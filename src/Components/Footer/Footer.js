@@ -78,7 +78,7 @@ function Footer() {
         </div>
       </div>
 
-      <div className='madewithlove'>Made With Love <RiHeartFill color='red' size={26} id="heart"/></div>
+      <div className='madewithlove'>Made With Love&nbsp;<RiHeartFill color='red' size={26} id="heart"/>&nbsp;in India</div>
     </div>
 
 

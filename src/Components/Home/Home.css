@@ -62,3 +62,34 @@
 {
     color: darkgray;
 }
+
+
+.home_bnner{
+    display: flex;
+    flex-direction: row-reverse;
+    margin-top: 20px;
+}
+.home_bnner_div1, .home_bnner_div2{
+  position: relative;
+  /* background: mediumpurple; */
+}
+.home_bnner_sub1, .home_bnner_sub2
+{
+  position: absolute;
+  top: 40px;
+  left: 370px;
+  color: ghostwhite;
+}
+.home_bnner_div1_h3, .home_bnner_div2_h3
+{
+  font-size: xx-large;
+  font-weight: 800;
+}
+.home_bnner_div1_p, .home_bnner_div2_p
+{
+  font-size: larger;
+}
+.home_bnner_div1_img:hover
+{
+
+}

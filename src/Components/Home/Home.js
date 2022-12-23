@@ -58,6 +58,25 @@ function Home() {
             </div>
       </div>
 
+      <div className="home_bnner">
+        <div className="home_bnner_div1">
+          <img className="home_bnner_div1_img" src="https://demo2.pavothemes.com/bookory/wp-content/uploads/2022/11/h6_banner1.jpg" alt="" />
+          <div className="home_bnner_sub1">
+            <h3 className="home_bnner_div1_h3">Books make Great Gifts</h3>
+            <p className="home_bnner_div1_p">Why not send the gift of a book to family & friends</p>
+          </div>
+        </div>
+
+        <div className="home_bnner_div2">
+          <img src="https://demo2.pavothemes.com/bookory/wp-content/uploads/2022/11/h6_banner2.jpg" alt="" />
+          <div className="home_bnner_sub2">
+            <h3 className="home_bnner_div2_h3">Sale 10% Off</h3>
+            <p className="home_bnner_div2_p">Its all begins with a great book!</p>
+          </div>
+        </div>
+      </div>
+
+
 
     </div>
   );

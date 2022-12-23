@@ -3,6 +3,7 @@ import Navbar from "../Navbar/Navbar";
 import "./Home.css";
 import stand from "../../Assets/Banners/stand.png";
 import Slider_home from "../../Views/Slider_home/Slider_home";
+import Slider_home1 from "../../Views/Slider_home1/Slider_home1"
 
 //icons
 import { FaTruck } from "react-icons/fa";
@@ -76,6 +77,7 @@ function Home() {
         </div>
       </div>
 
+      <Slider_home1 />
 
 
     </div>

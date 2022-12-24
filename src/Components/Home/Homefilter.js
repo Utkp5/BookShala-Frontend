@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import Homeproduct from "./Homeproduct.json";
 
+//icons
+import { IoIosStar } from "react-icons/io";
+
 function Homefilter() {
 
     const [Hmbook,setHmbook] = useState(Homeproduct);
@@ -22,15 +25,28 @@ function Homefilter() {
             </div>
 
 
-            <div className="product_card">
-                <div className="product_card_div"><img className="product_card_img" src="https://m.media-amazon.com/images/I/51oVTRsjcqL._AC_UY218_.jpg" alt="" /></div>
-                <div className="product_card_cont">
-                    <p className="card_Title" >The Silent Patient</p>
-                    <p className="card_Author" >hardcover | Alex Michaelides</p>
-                    <p className="card_Genres" >Mystery | English</p>
-                    <p className="card_Lang" >$200</p>
-                </div>
-            </div>
+            <div className="product_main">
+            {
+                Homeproduct.map((home_product_card) => {
+                    return (
+                            <div className="product_card">
+                                <div className="product_card_div"><img className="product_card_img" src={home_product_card.img} alt="" /></div>
+                                <div className="product_card_cont">
+                                    <p className="card_Title" >{home_product_card.Title}</p>
+                                    <p className="card_Author" >{home_product_card.Type} | {home_product_card.Author}</p>
+                                    <p className="card_Genres" >{home_product_card.Genres} | {home_product_card.Language}</p>
+                                    <div className="card_rating">
+                                    <p><IoIosStar color="orange" size={26}/><IoIosStar color="orange" size={26}/><IoIosStar color="orange" size={26}/><IoIosStar color="orange" size={26}/></p>
+                                    <p>{home_product_card.Rating}</p>
+                                    </div>
+                                    <p className="card_Lang" >{home_product_card.Price}</p>
+                                    <button className="home_cart_msg">Add to cart</button>
+                                </div>
+                            </div>
+                            )
+                        })
+            }
+           </div>
     </div>
   );
 }

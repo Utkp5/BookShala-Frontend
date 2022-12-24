@@ -6,7 +6,8 @@
         "Genres" : "Mystery",
         "Language"    : "English",
         "Rating" : "4.2",
-        "Type" : "hardcover"
+        "Type" : "hardcover",
+        "Price" : "₹654"
     },
     {
         "img"   : "https://m.media-amazon.com/images/I/71ErsKpwmrS._AC_UY218_.jpg",
@@ -15,7 +16,8 @@
         "Genres" : "Mystery",
         "Language"    : "English",
         "Rating" : "4.3",
-        "Type" : "hardcover"
+        "Type" : "hardcover",
+        "Price" : "₹320"
     },
     {
         "img"   : "https://m.media-amazon.com/images/I/41aEQgTFPoL._AC_UY218_.jpg",
@@ -24,7 +26,8 @@
         "Genres" : "Thriller",
         "Language"    : "English",
         "Rating" : "4.1",
-        "Type" : "hardcover"
+        "Type" : "hardcover",
+        "Price" : "₹386"
     },
     {
         "img"   : "https://m.media-amazon.com/images/I/81fWW4HP6gL._AC_UY218_.jpg",
@@ -33,7 +36,8 @@
         "Genres" : "Horror",
         "Language"    : "Hindi",
         "Rating" : "4.5",
-        "Type" : "PaperBook"
+        "Type" : "PaperBook",
+        "Price" : "₹270"
     },
     {
         "img"   : "https://m.media-amazon.com/images/I/71i2EaY-0IL._AC_UY218_.jpg",
@@ -42,7 +46,8 @@
         "Genres" : "Historical",
         "Language"    : "Hindi",
         "Rating" : "4.8",
-        "Type" : "hardcover"
+        "Type" : "hardcover",
+        "Price" : "₹520"
     },
     {
         "img"   : "https://m.media-amazon.com/images/I/71pqa+UNHJL._AC_UY218_.jpg",
@@ -51,7 +56,8 @@
         "Genres" : "Romance",
         "Language"    : "English",
         "Rating" : "4.4",
-        "Type" : "hardcover"
+        "Type" : "hardcover",
+        "Price" : "₹290"
     },
     {
         "img"   : "https://d2g9wbak88g7ch.cloudfront.net/productimages/mainimages/603/9780143421603.jpg",
@@ -60,7 +66,8 @@
         "Genres" : "Romance",
         "Language"    : "Hindi",
         "Rating" : "4.1",
-        "Type" : "hardcover"
+        "Type" : "hardcover",
+        "Price" : "₹550"
     },
     {
         "img"   : "https://m.media-amazon.com/images/I/41iMagWRj7S._SY264_BO1,204,203,200_QL40_FMwebp_.jpg",
@@ -69,7 +76,8 @@
         "Genres" : "Fiction",
         "Language"    : "English",
         "Rating" : "4.8",
-        "Type" : "hardcover"
+        "Type" : "hardcover",
+        "Price" : "₹900"
     },
     {
         "img"   : "https://d2g9wbak88g7ch.cloudfront.net/productimages/mainimages/774/9781405291774.jpg",
@@ -78,7 +86,8 @@
         "Genres" : "Fantasy",
         "Language"    : "English",
         "Rating" : "4.7",
-        "Type" : "hardcover"
+        "Type" : "hardcover",
+        "Price" : "₹300"
     },
     {
         "img"   : "https://d2g9wbak88g7ch.cloudfront.net/productimages/mainimages/493/9780241436493.jpg",
@@ -87,7 +96,8 @@
         "Genres" : "Dystopian",
         "Language"    : "English",
         "Rating" : "4.1",
-        "Type" : "hardcover"
+        "Type" : "hardcover",
+        "Price" : "₹500"
     },
     {
         "img"   : "https://d2g9wbak88g7ch.cloudfront.net/productimages/mainimages/686/9788175993686.jpg",
@@ -96,7 +106,8 @@
         "Genres" : "Realist",
         "Language"    : "English",
         "Rating" : "3.9",
-        "Type" : "PaperBook"
+        "Type" : "PaperBook",
+        "Price" : "₹700"
     },
     {
         "img"   : "https://d2g9wbak88g7ch.cloudfront.net/productimages/mainimages/597/9780008386597.jpg",
@@ -105,6 +116,7 @@
         "Genres" : "Spritual",
         "Language"    : "Hindi",
         "Rating" : "5.0",
-        "Type" : "hardcover"
+        "Type" : "hardcover",
+        "Price" : "₹800"
     }
 ]

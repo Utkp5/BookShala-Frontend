@@ -136,6 +136,7 @@
 {
     border: 2px solid;
     width: 20%;
+    margin-bottom: 25px;
 }
 .product_card_div{
     border: 2px solid;
@@ -169,3 +170,35 @@
   transform: scale(1.2);
   transition: all 0.5s linear;
 }
+.product_main
+{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.card_rating
+{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: larger;
+  font-weight: 500;
+}
+.home_cart_msg{
+    padding: 8px 16px;
+    font-size: large;
+    margin-top: 10px;
+    background: crimson;
+    color: ghostwhite;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 1px 2px 4px 2px dimgrey;
+    cursor: pointer;
+}
+
+.home_cart_msg:active{
+  box-shadow: 1px 3px 5px 2px black;
+  background-color: black;
+  color: ghostwhite;
+}
+/* product card  */

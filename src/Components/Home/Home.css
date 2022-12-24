@@ -129,3 +129,43 @@
   font-family: sans-serif;
   color: darkgray;
 }
+
+/* product card  */
+
+.product_card
+{
+    border: 2px solid;
+    width: 20%;
+}
+.product_card_div{
+    border: 2px solid;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    background: black;
+    align-items: center;
+    padding: 10px 0px;
+}
+.product_card_img
+{
+  width: 65%;
+  cursor: pointer;
+}
+.card_Title, .card_Lang
+{
+    font-size: x-large;
+}
+.card_Author, .card_Genres
+{
+  margin: 5px 0px;
+  font-size: 16px;
+}
+.product_card_cont
+{
+  padding: 12px 6px;
+}
+.product_card_img:hover{
+  transform: scale(1.2);
+  transition: all 0.5s linear;
+}

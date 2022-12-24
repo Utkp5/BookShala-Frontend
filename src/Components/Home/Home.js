@@ -4,6 +4,7 @@ import "./Home.css";
 import stand from "../../Assets/Banners/stand.png";
 import Slider_home from "../../Views/Slider_home/Slider_home";
 import Slider_home1 from "../../Views/Slider_home1/Slider_home1"
+import Homefilter from "./Homefilter";
 
 //icons
 import { FaTruck } from "react-icons/fa";
@@ -79,18 +80,7 @@ function Home() {
 
       <Slider_home1 />
 
-      <div>
-        <h3 className="home_filter_h3">Popular Collections</h3>
-          <p className="home_filter_p">The Way You Choose</p>
-          <div className="home_filter">
-              <button className="home_filter_btn">Mystery</button>
-              <button className="home_filter_btn">Romance</button>
-              <button className="home_filter_btn">Thriller</button>
-              <button className="home_filter_btn">Horror</button>
-              <button className="home_filter_btn">Spritual</button>
-          </div>
-      </div>
-
+      <Homefilter />
 
 
     </div>

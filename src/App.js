@@ -12,6 +12,7 @@ const  Contact = lazy(() => import("./Components/Contact/Contact"))
 const  Cart    = lazy(() => import("./Components/Cart/Cart"))
 const  Signup  = lazy(() => import("./Components/Signup/Signup"))
 const  Signin  = lazy(() => import("./Components/Signin/Signin"))
+const  Forgotpass  = lazy(() => import("./Components/Forgotpassword/Forgotpass"))
 
 
 
@@ -28,6 +29,7 @@ function App() {
             <Route exact path="/Cart" element={<Cart />} />
             <Route exact path="/Signup" element={<Signup />} />
             <Route exact path="/Signin" element={<Signin />} />
+            <Route exact path="/Forgotpass" element={<Forgotpass />} />
           </Routes>
         </Router>
     </Suspense>

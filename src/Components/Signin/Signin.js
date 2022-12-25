@@ -18,7 +18,7 @@ function Signin() {
           <br />
           <input className="input_signin" type="password" placeholder="Password"/>
           <div class="remember_form">
-            <NavLink to="/Forgotpassword" className="signin_nav">Forgot Password ?</NavLink>            
+            <NavLink to="/Forgotpass" className="signin_nav">Forgot Password ?</NavLink>            
           </div>
           <button type="submit" className="signin_btn">Log in</button>
         </div>

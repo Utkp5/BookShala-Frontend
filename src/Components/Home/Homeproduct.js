@@ -1,4 +1,4 @@
-[
+const books = [
     {
         "img"   : "https://m.media-amazon.com/images/I/51oVTRsjcqL._AC_UY218_.jpg",
         "Title" : "The Silent Patient",
@@ -120,3 +120,5 @@
         "Price" : "₹800"
     }
 ]
+
+export default books;

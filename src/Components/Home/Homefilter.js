@@ -1,12 +1,61 @@
 import React, { useState } from "react";
-import Homeproduct from "./Homeproduct.json";
+import Homeproduct from "./Homeproduct.js";
 
 //icons
 import { IoIosStar } from "react-icons/io";
 
 function Homefilter() {
 
-    const [Hmbook,setHmbook] = useState(Homeproduct);
+    const [books,setHmbook] = useState(Homeproduct);
+
+    //all
+    const all = () => {
+        const finalbook = Homeproduct.filter((value) => {
+            return value
+        })
+        setHmbook(finalbook)
+    }
+    
+    //Mystery book
+    const Mysterybook = (cardgenres) => {
+        const finalbook = Homeproduct.filter((value) => {
+            return value.Genres == cardgenres
+        })
+        setHmbook(finalbook)
+    }
+
+    //Romancebook
+    const Romancebook = (cardgenres) => {
+        const finalbook = Homeproduct.filter((value) => {
+            return value.Genres == cardgenres
+        })
+        setHmbook(finalbook)
+    }
+
+    //Thrillerbook
+    const Thrillerbook = (cardgenres) => {
+        const finalbook = Homeproduct.filter((value) => {
+            return value.Genres == cardgenres
+        })
+        setHmbook(finalbook)
+    }
+    
+    //Horrorbook
+    const Horrorbook = (cardgenres) => {
+        const finalbook = Homeproduct.filter((value) => {
+            return value.Genres == cardgenres
+        })
+        setHmbook(finalbook)
+    }
+
+    //Spritualbook
+    const Spritualbook = (productTitles) => {
+        const finalbook = Homeproduct.filter((value) => {
+          return value.Genres == productTitles
+        }) 
+      
+        setHmbook(finalbook)
+      }
 
 
   return (
@@ -16,18 +65,19 @@ function Homefilter() {
               <h3 className="home_filter_h3">Popular Collections</h3>
               <p className="home_filter_p">The Way You Choose</p>
               <div className="home_filter">
-                <button className="home_filter_btn" onClick={() => ('Mystery')} >Mystery</button>
-                <button className="home_filter_btn" onClick={() => ('Romance')} >Romance</button>
-                <button className="home_filter_btn" onClick={() => ('Thriller')} >Thriller</button>
-                <button className="home_filter_btn" onClick={() => ('Horror')} >Horror</button>
-                <button className="home_filter_btn" onClick={() => ('Spritual')} >Spritual</button>
+                <button className="home_filter_btn" onClick={() => all('')}>All</button>
+                <button className="home_filter_btn" onClick={() => Mysterybook('Mystery')}>Mystery</button>
+                <button className="home_filter_btn" onClick={() => Romancebook('Romance')}>Romance</button>
+                <button className="home_filter_btn" onClick={() => Thrillerbook('Thriller')}>Thriller</button>
+                <button className="home_filter_btn" onClick={() => Horrorbook('Horror')}>Horror</button>
+                <button className="home_filter_btn" onClick={() => Spritualbook('Spritual')}>Spritual</button>
               </div>
             </div>
 
 
             <div className="product_main">
             {
-                Homeproduct.map((home_product_card) => {
+                books.map((home_product_card) => {
                     return (
                             <div className="product_card">
                                 <div className="product_card_div"><img className="product_card_img" src={home_product_card.img} alt="" /></div>

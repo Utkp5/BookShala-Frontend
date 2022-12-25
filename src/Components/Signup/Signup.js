@@ -26,6 +26,7 @@ function Signup() {
           <div class="remember_form">
             <span><input type="checkbox" /> &nbsp;Remember me</span>
             <span>You are creating an account, and agree to Bookshala <NavLink className="sgn_navlink">Terms of Service</NavLink> and <NavLink className="sgn_navlink">Privacy Policy</NavLink></span>
+            <NavLink to="/Signin" className="signin_nav">Already a member</NavLink>
           </div>
           <button type="submit" className="signup_btn">Sign up</button>
         </div>

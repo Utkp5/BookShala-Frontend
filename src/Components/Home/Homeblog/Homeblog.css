@@ -1,3 +1,11 @@
+.hmblog_h3
+{
+    text-align: center;
+    font-size: xx-large;
+    font-family: system-ui;
+    color: darksalmon;
+    margin-top: 80px;
+}
 .hmblog
 {
     display: flex;
@@ -36,13 +44,6 @@
     background-color: crimson;
     color: ghostwhite;
     cursor: pointer;
-}
-.hmblog_h3
-{
-    text-align: center;
-    font-size: xx-large;
-    font-family: system-ui;
-    color: darksalmon;
 }
 .hmblog_div1
 {

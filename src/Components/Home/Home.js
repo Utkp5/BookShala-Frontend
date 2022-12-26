@@ -11,6 +11,7 @@ import { FaTruck } from "react-icons/fa";
 import { FaUserLock } from "react-icons/fa";
 import { FaRedoAlt } from "react-icons/fa";
 import { FaHeadset } from "react-icons/fa";
+import Homeblog from "./Homeblog/Homeblog";
 
 function Home() {
   return (
@@ -82,6 +83,7 @@ function Home() {
 
       <Homefilter />
 
+      <Homeblog />
 
     </div>
   );

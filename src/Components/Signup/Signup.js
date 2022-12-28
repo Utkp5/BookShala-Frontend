@@ -13,6 +13,26 @@ function Signup() {
   const [password,setpassword] = useState();
   const [confirmPassword,setconfirmpassword] = useState();
 
+  const handleSubmit = async () => {
+
+    const user = {firstName,lastName,userEmail,password,confirmPassword};
+
+    await axios.post("http://localhost:5000/api/Signup",user).then(function (response) {
+    
+        if (response.data) {
+          console.log(`user siginup successfully`);
+          window.location.href = "/Signin"
+        }
+
+    }).catch(function(error) {
+         {
+          console.log(`something went wrong!`);
+           console.log(error);
+         }
+      });
+  }
+
+
   return (
     <div>
       <Navbar />
@@ -46,7 +66,9 @@ function Signup() {
             <span>You are creating an account, and agree to Bookshala <NavLink className="sgn_navlink">Terms of Service</NavLink> and <NavLink className="sgn_navlink">Privacy Policy</NavLink></span>
             <NavLink to="/Signin" className="signin_nav">Already a member</NavLink>
           </div>
-          <button type="submit" className="signup_btn">Sign up</button>
+          <button type="submit" className="signup_btn" onClick={() => {
+            handleSubmit();
+          }}>Sign up</button>
         </div>
       </div>
     </div>

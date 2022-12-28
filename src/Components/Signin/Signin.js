@@ -1,10 +1,36 @@
-import React from "react";
+import React, { useState } from "react";
 import Navbar from "../Navbar/Navbar";
 import "./Signin.css"
 import img2 from "../../Assets/Images/img2.jpg"
 import { NavLink } from "react-router-dom";
+import axios from "axios";
 
 function Signin() {
+
+  const [userEmail,setuserEmail] = useState();
+  const [password,setpassword] = useState();
+
+  const Handlesubmit = async() => {
+
+    const user = {userEmail,password};
+
+    await axios.post("http://localhost:5000/api/Signup",user).then(function (response) {
+    
+      console.log(response.data.user._id);
+
+      if (response.data) {
+        localStorage.setItem("token",response.data.token);
+        localStorage.setItem("userID",response.data.user._id);
+        window.location.href = "/Blog";
+        console.log(`User login successfully`);
+      }
+
+    }).catch(function (error) {
+        console.log(`invalid credentials`);
+    })
+  }
+
+
   return (
     <div>
       <Navbar />
@@ -14,13 +40,19 @@ function Signin() {
           <h2 id="sgnin_h3">Hey Welcome Back 👋</h2><br />
           <p>Enter The Information You Entered while Registering!</p>
           <div className="signinform">
-          <input className="input_signin" type="email" placeholder="E-mail Address"/>
+          <input className="input_signin" type="email" name="userEmail" placeholder="E-mail Address" onChange={(e) => {
+            setuserEmail(e.target.value);
+          }} />
           <br />
-          <input className="input_signin" type="password" placeholder="Password"/>
+          <input className="input_signin" type="password" name="password" placeholder="Password" onChange={(e) => {
+            setpassword(e.target.value);
+          }} />
           <div class="remember_form">
             <NavLink to="/Forgotpass" className="signin_nav">Forgot Password ?</NavLink>            
           </div>
-          <button type="submit" className="signin_btn">Log in</button>
+          <button type="submit" className="signin_btn" onClick={() => {
+            Handlesubmit();
+          }}>Log in</button>
         </div>
         </div>
       </div>

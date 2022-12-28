@@ -10,19 +10,18 @@ function Signin() {
   const [userEmail,setuserEmail] = useState();
   const [password,setpassword] = useState();
 
-  const Handlesubmit = async() => {
+  const Handlesubmitlogin = async() => {
 
     const user = {userEmail,password};
 
-    await axios.post("http://localhost:5000/api/Signup",user).then(function (response) {
+    await axios.post("http://localhost:5000/api/Signin",user).then(function (response) {
     
-      console.log(response.data.user._id);
 
       if (response.data) {
-        localStorage.setItem("token",response.data.token);
-        localStorage.setItem("userID",response.data.user._id);
-        window.location.href = "/Blog";
         console.log(`User login successfully`);
+        window.location.href = "/Shop";
+        localStorage.setItem("token",response.data.token);
+        localStorage.setItem("userID",response.data.userID);
       }
 
     }).catch(function (error) {
@@ -51,7 +50,7 @@ function Signin() {
             <NavLink to="/Forgotpass" className="signin_nav">Forgot Password ?</NavLink>            
           </div>
           <button type="submit" className="signin_btn" onClick={() => {
-            Handlesubmit();
+            Handlesubmitlogin();
           }}>Log in</button>
         </div>
         </div>

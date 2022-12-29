@@ -1,7 +1,8 @@
+import React from "react";
 import { HiMenu } from "react-icons/hi";
 import { HiX } from "react-icons/hi";
 import { HiShoppingCart } from "react-icons/hi";
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import logo from "../../Assets/Images/logo.png"
 import { NavLink } from "react-router-dom";
 import './Navbar.css';
@@ -9,6 +10,33 @@ import './Navbar.css';
 
 function App() {
   const [menu,setmenu] = useState(false);
+
+  const [inout,setinout] = useState();
+   const [inoutDirection,setDirection] = useState("/Signin");
+    
+   useEffect(() => {
+    let tokenval = localStorage.getItem("token");
+
+    if (tokenval) {
+      setinout("Logout")
+      setDirection("/")
+    }
+    else
+    {
+      setinout("Signin");
+      setDirection("/Signin");
+    }
+   },[])
+
+   const Handlechange = () => {
+    let tokenval = localStorage.getItem("token");
+    if (tokenval) {
+      localStorage.removeItem("token");
+    }
+   }
+
+
+
 
   return (
     <div className="App">
@@ -26,8 +54,18 @@ function App() {
                 <li className="hover_li"><NavLink  to ="/Blog">   Blog   </NavLink></li>
                 <li className="hover_li"><NavLink  to ="/Shop">   Shop   </NavLink></li>
                 <li className="hover_li"><NavLink  to ="/Contact">Contact</NavLink></li>
-                <li><NavLink to="/Signup"><button className='button_signup'>Signup</button></NavLink></li>
-                <li><NavLink to="/Signin"><button className='button_login'>Signin</button></NavLink></li>
+
+                {
+                  !localStorage.getItem('token') ?
+                  <li><NavLink to="/Signup"><button className='button_signup'>Signup</button></NavLink></li>
+                  : null
+                }
+
+                <li><NavLink to={inoutDirection}><button className='button_login' onClick={() =>{
+                  Handlechange();
+                }}>{inout}</button></NavLink></li>
+
+
                 <NavLink to ="/Cart"><HiShoppingCart size={32} color="#F9FFEA" className="cartIcon"/></NavLink>
               </ul>
               <div className='menu_icon' onClick={() => setmenu(!menu)}>

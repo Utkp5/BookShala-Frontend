@@ -5,6 +5,7 @@ import { HiShoppingCart } from "react-icons/hi";
 import { useState, useEffect } from 'react';
 import logo from "../../Assets/Images/logo.png"
 import { NavLink } from "react-router-dom";
+import { HiOutlineChevronDown } from "react-icons/hi";
 import './Navbar.css';
 
 
@@ -12,15 +13,17 @@ function App() {
   const [menu,setmenu] = useState(false);
 
   const [inout,setinout] = useState();
-   const [inoutDirection,setDirection] = useState("/Signin");
+  const [inoutDirection,setDirection] = useState("/Signin");
+  const [name,setname] = useState();
     
    useEffect(() => {
     let tokenval = localStorage.getItem("token");
-    let Name = localStorage.getItem("firstName");
+    var Name = localStorage.getItem("firstName");
 
     if (tokenval) {
-      setinout(Name)
+      setinout("Logout")
       setDirection("/")
+      setname(Name);
     }
     else
     {
@@ -29,7 +32,8 @@ function App() {
     }
    },[])
 
-   const Handlechange = () => {
+
+   const handleChnage = () => {
     let tokenval = localStorage.getItem("token");
     if (tokenval) {
       localStorage.removeItem("token");
@@ -40,6 +44,8 @@ function App() {
    }
 
 
+
+   
 
 
   return (
@@ -56,7 +62,12 @@ function App() {
                 <li className="hover_li"><NavLink  to ="/">       Home   </NavLink></li>
                 <li className="hover_li"><NavLink  to ="/About">  About  </NavLink></li>
                 <li className="hover_li"><NavLink  to ="/Blog">   Blog   </NavLink></li>
-                <li className="hover_li"><NavLink  to ="/Shop">   Shop   </NavLink></li>
+
+                {
+                  !localStorage.getItem('token') ? null :
+                  <li className="hover_li"><NavLink  to ="/Shop">   Shop   </NavLink></li>
+                }
+
                 <li className="hover_li"><NavLink  to ="/Contact">Contact</NavLink></li>
 
                 {
@@ -65,13 +76,26 @@ function App() {
                   : null
                 }
 
-                <li><NavLink to={inoutDirection}><button className='button_login' onClick={() =>{
-                  Handlechange();
-                }}>{inout}</button></NavLink></li>
 
+                {
+                  !localStorage.getItem('token') ? 
+                  <li><NavLink to="/Signin"><button className='button_login'>Signin</button></NavLink></li>
+                  :
+                  <div className="dropdown">
+                    <button className="dropbtn">{name} <HiOutlineChevronDown className="dropdown_icon"/></button>
+                    <div className="dropdown-content" >
+                      <NavLink to="/Profile" className="dropdown_navlink">Profile</NavLink> 
+                      <NavLink to={inoutDirection} className="dropdown_navlink" onClick={() => {
+                        handleChnage();
+                      }}>{inout}</NavLink> 
+                    </div>
+                  </div>
+                }
 
                 <NavLink to ="/Cart"><HiShoppingCart size={32} color="#F9FFEA" className="cartIcon"/></NavLink>
+
               </ul>
+
               <div className='menu_icon' onClick={() => setmenu(!menu)}>
                     {menu ? <HiX size={46} /> :<HiMenu size={46} />}
               </div>

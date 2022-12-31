@@ -18,9 +18,10 @@
 .navbar_ul {
   list-style: none;
   display: flex;
-  justify-content: end;
+  /* justify-content: end; */
+  margin-right: 12px;
   align-items: center;
-  /* width: 70vw; */
+
 }
 li {
   padding: 4px 10px;
@@ -73,6 +74,64 @@ li a:hover {
 .cartIcon {
   margin-right: 18px;
 }
+
+/* dropdown */
+
+.dropbtn {
+  padding: 11px 20px;
+  font-weight: 500;
+  text-transform: capitalize;
+  margin-right: 22px;
+  font-size: large;
+  outline: none;
+  color: #f9ffea;
+  cursor: pointer;
+  border-bottom: 3px solid floralwhite;
+  background: transparent;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content {
+  padding: 12px 23px;
+}
+.dropdown_icon
+{
+  margin-left: 16px;
+}
+.dropdown_navlink{
+  display: block;
+  color: black;
+  padding: 12px 12px;
+  text-decoration: none;
+}
+.dropdown-content .dropdown_navlink:hover {background-color: #ddd;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {transition: all 0.7s;}
+
+/* dropdown */
+
 
 @media screen and (max-width: 900px) {
   .navbar_ul {
@@ -127,6 +186,15 @@ li a:hover {
     top: 15px;
     right: 25px;
     transition: all 0.5s ease-in-out;
+  }
+  .cartIcon
+  {
+    margin-top: 20px;
+    margin-bottom: 12px;
+  }
+  .dropdown
+  {
+    margin-left: 30px;
   }
 }
 @media screen and (max-width: 500px) {

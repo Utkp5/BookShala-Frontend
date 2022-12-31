@@ -25,6 +25,7 @@ function Signin() {
         console.log(`User login successfully`);
         localStorage.setItem("token",response.data.token);
         localStorage.setItem("userID",response.data.userID);
+        localStorage.setItem("firstName",response.data.firstName);
         window.location.href = "/Shop";
       }
 
@@ -54,7 +55,6 @@ function Signin() {
           }} />
           <div class="remember_form">
             <NavLink to="/Forgotpassword" className="signin_nav">Forgot Password ?</NavLink>            
-            <NavLink to="/Forgotsuccess" className="signin_nav">Forgot Password ?</NavLink>            
           </div>
           <button type="submit" className="signin_btn" onClick={() => {
             Handlesubmitlogin();

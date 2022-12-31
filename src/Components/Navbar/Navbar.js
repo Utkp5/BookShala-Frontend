@@ -16,9 +16,10 @@ function App() {
     
    useEffect(() => {
     let tokenval = localStorage.getItem("token");
+    let Name = localStorage.getItem("firstName");
 
     if (tokenval) {
-      setinout("Logout")
+      setinout(Name)
       setDirection("/")
     }
     else
@@ -32,6 +33,9 @@ function App() {
     let tokenval = localStorage.getItem("token");
     if (tokenval) {
       localStorage.removeItem("token");
+      localStorage.removeItem("userID");
+      localStorage.removeItem("firstName");
+      window.location.reload();
     }
    }
 

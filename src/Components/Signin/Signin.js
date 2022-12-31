@@ -47,7 +47,8 @@ function Signin() {
             setpassword(e.target.value);
           }} />
           <div class="remember_form">
-            <NavLink to="/Forgotpass" className="signin_nav">Forgot Password ?</NavLink>            
+            <NavLink to="/Forgotpassword" className="signin_nav">Forgot Password ?</NavLink>            
+            <NavLink to="/Forgotsuccess" className="signin_nav">Forgot Password ?</NavLink>            
           </div>
           <button type="submit" className="signin_btn" onClick={() => {
             Handlesubmitlogin();

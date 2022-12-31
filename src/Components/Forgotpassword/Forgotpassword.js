@@ -6,10 +6,11 @@ import { NavLink } from 'react-router-dom';
 
 
 
-function Frgtpassword() {
+function Forgotpassword() {
 
 
 	const [userEmail,setuserEmail] = useState();
+	
 	const Handlereset = async() => {
 
 		const user = {
@@ -47,4 +48,4 @@ function Frgtpassword() {
   )
 }
 
-export default Frgtpassword
+export default Forgotpassword

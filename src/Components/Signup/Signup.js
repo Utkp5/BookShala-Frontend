@@ -4,6 +4,9 @@ import Navbar from "../Navbar/Navbar";
 import gif from "../../Assets/Images/signupGif.gif"
 import { NavLink } from "react-router-dom";
 import axios from "axios";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 function Signup() {
 
@@ -21,12 +24,14 @@ function Signup() {
     
         if (response.data) {
           console.log(`user siginup successfully`);
+          toast.success("Registered Successfully");
           window.location.href = "/Signin"
         }
 
     }).catch(function(error) {
          {
-          console.log(`something went wrong!`);
+           console.log(`something went wrong!`);
+           toast.warning("Something went wrong!");
            console.log(error);
          }
       });
@@ -35,6 +40,7 @@ function Signup() {
 
   return (
     <div>
+
       <Navbar />
       <div class="parent">
       <div>
@@ -72,6 +78,9 @@ function Signup() {
         </div>
       </div>
     </div>
+
+    <ToastContainer />
+
     </div>
   );
 }

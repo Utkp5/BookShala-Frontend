@@ -4,6 +4,9 @@ import "./Signin.css"
 import img2 from "../../Assets/Images/img2.jpg"
 import { NavLink } from "react-router-dom";
 import axios from "axios";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 function Signin() {
 
@@ -18,13 +21,15 @@ function Signin() {
     
 
       if (response.data) {
+        toast.success("Login Successfully");
         console.log(`User login successfully`);
-        window.location.href = "/Shop";
         localStorage.setItem("token",response.data.token);
         localStorage.setItem("userID",response.data.userID);
+        window.location.href = "/Shop";
       }
 
     }).catch(function (error) {
+        toast.warning("invalid credentials");
         console.log(`invalid credentials`);
     })
   }
@@ -32,6 +37,7 @@ function Signin() {
 
   return (
     <div>
+
       <Navbar />
       <div class="parent1">
           <img src={img2} alt="logo" className="signin_gif"/>
@@ -56,6 +62,9 @@ function Signin() {
         </div>
         </div>
       </div>
+
+      <ToastContainer />
+
     </div>
   );
 }

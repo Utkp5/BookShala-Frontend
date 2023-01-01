@@ -13,7 +13,7 @@ function Blog() {
             <div className='blog_div1'>
               <img className='blog_img' src="https://cdn.shopify.com/s/files/1/1288/2297/articles/blog_7_600x400_crop_center.jpg?v=1646452858" alt="" />
                  <p className='blog_p1'>Significant reading has info</p>
-                 <p className='blog_p2'>04 March, 2022 \ HasTech Shopify Team</p>
+                 <p className='blog_p2'>04 March, 2022 \ HasTech Bookshala Team</p>
                  <p>The summer holidays are wonderful. Dressing for them can be significantly
                   less so: Packing light is always at a premium, but one never wants to feel high, dry, and seriously 
                   unstylish with all of the possible opportunities to pose for that most modern
@@ -33,7 +33,7 @@ function Blog() {
             <div className='blog_div1'>
               <img className='blog_img' src="https://cdn.shopify.com/s/files/1/1288/2297/articles/blog_6_600x400_crop_center.jpg?v=1646452719" alt="" />
                  <p className='blog_p1'>Activities Book International</p>
-                 <p className='blog_p2'>04 March, 2022 \ HasTech Shopify Team</p>
+                 <p className='blog_p2'>14 Nov, 2022 \ HasTech Bookshala Team</p>
                  <p>The summer holidays are wonderful. Dressing for them can be significantly
                   less so: Packing light is always at a premium, but one never wants to feel high, dry, and seriously 
                   unstylish with all of the possible opportunities to pose for that most modern
@@ -53,7 +53,7 @@ function Blog() {
             <div className='blog_div1'>
               <img className='blog_img' src="https://cdn.shopify.com/s/files/1/1288/2297/articles/blog_5_600x400_crop_center.jpg?v=1646452601" alt="" />
                  <p className='blog_p1'>International activities of the book</p>
-                 <p className='blog_p2'>04 March, 2022 \ HasTech Shopify Team</p>
+                 <p className='blog_p2'>19 Jan, 2023 \ HasTech Bookshala Team</p>
                  <p>The summer holidays are wonderful. Dressing for them can be significantly
                   less so: Packing light is always at a premium, but one never wants to feel high, dry, and seriously 
                   unstylish with all of the possible opportunities to pose for that most modern

@@ -26,6 +26,8 @@ function Signin() {
         localStorage.setItem("token",response.data.token);
         localStorage.setItem("userID",response.data.userID);
         localStorage.setItem("firstName",response.data.firstName);
+        localStorage.setItem("userEmail",response.data.userEmail)
+        localStorage.setItem("avatar",response.data.avatar);
         window.location.href = "/Shop";
       }
 

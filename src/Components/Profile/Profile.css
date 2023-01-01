@@ -1,0 +1,89 @@
+.profile
+{
+    background-image: url(https://st.depositphotos.com/1280399/1405/i/600/depositphotos_14050173-stock-photo-blue-abstract-background-with-soft.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+}
+
+.profile_div
+{
+    padding: 0px 150px;
+    position: absolute;
+    top: 29px;
+    width: 70vw;
+    left: 52px;
+}
+.profile_h3
+{
+    text-align: center;
+    margin-top: 25px;
+    font-size: xx-large;
+    color: gainsboro;
+    padding: 10px 0;
+    background: black;
+}
+.psec
+{
+    border: 2px solid lavender;
+    display: flex;
+    align-items: center;
+    height: 430px;
+    margin: 30px 0px;
+    justify-content: space-evenly;
+}
+.psec_img
+{
+
+}
+.psec_img_div
+{
+    display: flex;
+    flex-direction: column;
+}
+.psec_btn
+{
+    font-size: large;
+    margin-top: 13px;
+    padding: 12px 0px;
+    border-radius: 4px;
+    background-color: crimson;
+    cursor: pointer;
+    color: #f1f1f1;
+    border: 1px solid crimson;
+}
+.psec_btn:active
+{
+    background-color: black;
+    color: antiquewhite;
+    border: 1px solid black;
+}
+.psec_div
+{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    height: 300px;
+}
+.psec_input
+{
+    padding: 8px 10px;
+    font-size: larger;
+    margin-left: 60px;
+    margin-bottom: 18px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    border-bottom: 5px solid darkgray;
+    box-shadow: 3px 4px 6px 2px darkgrey;
+}
+.psec_input_name
+{
+    text-transform: capitalize;
+}
+.profile_label
+{
+    color: ghostwhite;
+}

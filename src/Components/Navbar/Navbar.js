@@ -36,9 +36,12 @@ function App() {
    const handleChnage = () => {
     let tokenval = localStorage.getItem("token");
     if (tokenval) {
-      localStorage.removeItem("token");
-      localStorage.removeItem("userID");
-      localStorage.removeItem("firstName");
+      // localStorage.removeItem("token");
+      // localStorage.removeItem("userID");
+      // localStorage.removeItem("firstName");
+      // localStorage.removeItem("userEmail");
+      // localStorage.removeItem("avatar");
+      localStorage.clear();
       window.location.reload();
     }
    }

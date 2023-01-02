@@ -16,11 +16,10 @@ function Forgotpassword() {
 		const user = {
 			userEmail
 		}
-		await axios.post("http://localhost:5000/api/Frgtpassword",user).then(function (response) {
+		await axios.post("http://localhost:5000/api/Forgotpass/Forgotpassword",user).then(function (response) {
     
     if (response.data) {
       Notify.success('Reset password email has been sent Successfully!')
-    //   window.location.href = "/resetpassword";
     }
     }).catch(function (error) {
         Notify.failure('Something went Wrong!')

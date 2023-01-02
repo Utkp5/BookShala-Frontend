@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import Homeproduct from "./Homeproduct.js";
+import Swal from 'sweetalert2';
+
 
 //icons
 import { IoIosStar } from "react-icons/io";
@@ -58,6 +60,31 @@ function Homefilter() {
       }
 
 
+      //homeCart
+
+      const handleHomesubmit = () => {
+        let token = localStorage.getItem('token');
+
+        if (token) {
+
+            Swal.fire({
+                icon: 'info',
+                title: '_________',
+                text: 'Go to shop page to buy book',
+             })
+        }
+        else
+        {
+            Swal.fire({
+                icon: 'warning',
+                title: 'Oops...',
+                text: 'Please Login to continue',
+             })
+        }
+      }
+
+
+
   return (
     <div>
 
@@ -90,7 +117,9 @@ function Homefilter() {
                                     <p>{home_product_card.Rating}</p>
                                     </div>
                                     <p className="card_Lang" >{home_product_card.Price}</p>
-                                    <button className="home_cart_msg">Add to cart</button>
+                                    <button className="home_cart_msg" onClick={() => {
+                                        handleHomesubmit();
+                                    }}>Add to cart</button>
                                 </div>
                             </div>
                             )

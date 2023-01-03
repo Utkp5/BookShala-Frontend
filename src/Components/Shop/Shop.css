@@ -16,6 +16,7 @@
 {
     font-size: xxx-large;
     color: lavender;
+    box-shadow: 0px 0px 33px 8px aliceblue;
 }
 .shop_main
 {
@@ -27,16 +28,15 @@
 {
     display: flex;
     justify-content: space-between;
-    border: 2px solid darkcyan;
     margin-top: 120px;
 }
-.shop_filter_div
-{
-    border: 1px solid red;
-}
+
 .shop_products_div
 {
-    border: 1px solid green;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
 }
 .shop_search
 {
@@ -81,3 +81,69 @@
     text-align: center;
     color: darkcyan;
 }
+
+/* product card */
+.shop_card
+{
+    border: 2px solid;
+    width: 25%;
+    margin-bottom: 25px;
+}
+.shop_card_div{
+    border: 2px solid;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    background: black;
+    align-items: center;
+    padding: 10px 0px;
+}
+.shop_card_img
+{
+  width: 65%;
+  cursor: pointer;
+}
+.shopcard_Title, .shopcard_Lang
+{
+    font-size: x-large;
+}
+.shopcard_Author, .shopcard_Genres
+{
+  margin: 5px 0px;
+  font-size: 16px;
+}
+.shop_card_cont
+{
+  padding: 12px 6px;
+}
+.shop_card_img:hover{
+  transform: scale(1.2);
+  transition: all 0.5s linear;
+}
+.shopcard_rating
+{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: larger;
+  font-weight: 500;
+}
+.shophome_cart_msg{
+    padding: 8px 16px;
+    font-size: large;
+    margin-top: 10px;
+    background: crimson;
+    color: ghostwhite;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 1px 2px 4px 2px dimgrey;
+    cursor: pointer;
+}
+
+.shophome_cart_msg:active{
+  box-shadow: 1px 3px 5px 2px black;
+  background-color: black;
+  color: ghostwhite;
+}
+/* product card  */

@@ -1,0 +1,83 @@
+.shop_banner
+{
+    background-image: url(https://cdn.pixabay.com/photo/2016/07/31/16/24/banner-1559400_960_720.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.9;
+    background-attachment: fixed;
+    height: 400px;
+    filter: brightness(0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.shop_h2
+{
+    font-size: xxx-large;
+    color: lavender;
+}
+.shop_main
+{
+    border: 2px solid ;
+    position: relative;
+    
+}
+.shop_flex
+{
+    display: flex;
+    justify-content: space-between;
+    border: 2px solid darkcyan;
+    margin-top: 120px;
+}
+.shop_filter_div
+{
+    border: 1px solid red;
+}
+.shop_products_div
+{
+    border: 1px solid green;
+}
+.shop_search
+{
+    position: absolute;
+    top: 40px;
+    left: 400px;
+    height: 45px;
+    width: 500px;
+    border: 3px solid darkcyan;
+    padding: 4px 24px;
+    font-size: larger;
+    outline: none;
+    border-radius: 6px;
+}
+.shop_filter_Lang
+{
+    display: flex;
+    flex-direction: column;
+    margin-top: 42px;
+    padding: 1px 50px;
+}
+.shop_filter_Lang_input
+{
+    display: flex;
+    flex-direction: column;
+    padding: 30px 25px;
+}
+.shop_filter_input{
+    height: 35px;
+    width: 30px;
+    margin-right: 15px;
+}
+.shop_filter_label{
+    font-size: x-large;
+    display: flex;
+    cursor: pointer;
+    margin-bottom: 25px;
+}
+.shop_filter_h2
+{
+    font-size: xx-large;
+    text-align: center;
+    color: darkcyan;
+}

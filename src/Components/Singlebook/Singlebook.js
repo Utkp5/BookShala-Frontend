@@ -3,7 +3,7 @@ import "./Singlebook.css";
 import { useState , useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
-// import Navbar from "../Navbar/Navbar"
+import useCollapse from 'react-collapsed';
 
 //icons
 import { FaBookOpen } from "react-icons/fa";
@@ -76,6 +76,9 @@ function Singlebook() {
             <div className='onebook_main1_desc'>
               <p className='onebook_main1_desc_p'><FaScroll size={26} color="darkgrey"/>&nbsp;Book Description</p>
               <p className='onebook_main1_desc_p1'>{booksbook.bookDescription}</p>
+              <section {...getCollapseProps()}>Collapsed content 🙈</section>
+              <button {...getToggleProps({ onClick: () => 
+                setExpanded((prevExpanded) => !prevExpanded),})}>{isExpanded ? 'Collapse' : 'Expand'}</button>
             </div>
             
             

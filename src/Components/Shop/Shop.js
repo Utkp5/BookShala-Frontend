@@ -6,6 +6,7 @@ import axios from "axios";
 
 //icons
 import { IoIosStar } from "react-icons/io";
+import { NavLink } from "react-router-dom";
 
 
 function Shop() {
@@ -24,7 +25,7 @@ function Shop() {
         
         const bookApi = (
           await axios.get("http://localhost:5000/api/books/getBooks",{})
-        ).data;
+        ).data; //here we have used data bcz we want only data to show in console if dont write then alsi its ok ucantry
 
         setbook(bookApi);
         console.log(bookApi);
@@ -37,6 +38,57 @@ function Shop() {
 
     fetchData();
   }, []);
+
+
+  
+  // async function booksAPI(){
+  //   const response = await axios.get("http://localhost:5000/api/books/getBooks")
+  //   if (response.status === 200) {
+  //     return response.data
+  //   } 
+  // }
+
+  
+  // const finalbookAPI =  booksAPI();
+  // console.log(finalbookAPI);
+  
+
+  //Filter
+
+  //Languages english
+  const engbook = (englang) => {
+    const fbook = book.filter((value) => {
+      return value.language == englang;
+    })
+    setbook(fbook);
+    
+  }
+
+  //Languages Hindi
+  const Hindibook = (Hindilang) => {
+    const fbook = book.filter((value) => {
+      return value.language == Hindilang;
+    })
+    setbook(fbook);
+    
+  }
+
+  //Languages Tamil
+  const Tamilbook = (Tamillang) => {
+    const fbook = book.filter((value) => {
+      return value.language == Tamillang;
+    })
+    setbook(fbook);
+  }
+
+  //Languages Marathi
+  const Marathibook = (Marathilang) => {
+    const fbook = book.filter((value) => {
+      return value.language == Marathilang;
+    })
+    setbook(fbook);
+  }
+
 
 
 
@@ -60,10 +112,10 @@ function Shop() {
               <div className="shop_filter_Lang"> 
                   <h3>Languages</h3>
                   <div className="shop_filter_Lang_input">
-                    <label className="shop_filter_label"><input className="shop_filter_input" type="checkbox" name="English" id="" />English</label>
-                    <label className="shop_filter_label"><input className="shop_filter_input" type="checkbox" name="Hindi" id="" />Hindi</label>
-                    <label className="shop_filter_label"><input className="shop_filter_input" type="checkbox" name="Tamil" id="" />Tamil</label>
-                    <label className="shop_filter_label"><input className="shop_filter_input" type="checkbox" name="Marathi" id="" />Marathi</label>
+                    <label className="shop_filter_label" onClick={() => engbook('English')}><input className="shop_filter_input" type="radio" name="options" id="" />English</label>
+                    <label className="shop_filter_label" onClick={() => Hindibook('Hindi')}><input className="shop_filter_input" type="radio" name="options" id="" />Hindi</label>
+                    <label className="shop_filter_label" onClick={() => Tamilbook('Tamil')}><input className="shop_filter_input" type="radio" name="options" id="" />Tamil</label>
+                    <label className="shop_filter_label" onClick={() => Marathibook('Marathi')}><input className="shop_filter_input" type="radio" name="options" id="" />Marathi</label>
                   </div>
               </div>
               <div className="shop_filter_Lang"> 
@@ -88,16 +140,17 @@ function Shop() {
                     <label className="shop_filter_label"><input className="shop_filter_input" type="checkbox" name="Realist" id="" />Realist</label>
                   </div>
               </div>
-
             </div>
 
 
             <div className="shop_products_div">
                 {
-                  book.map((shop_card) => {
+                  book.map((shop_card,index) => {
                       return (
-                              <div className="shop_card">
-                                  <div className="shop_card_div"><img className="shop_card_img" src={shop_card.bookImg} alt="img" /></div>
+                              <div className="shop_card" key={index}>
+                                  <NavLink><div className="shop_card_div" onClick={() => {
+                                    window.location.href="/Singlebook/" + shop_card._id;
+                                  }}><img className="shop_card_img" src={shop_card.bookImg} alt="img" /></div></NavLink>
                                   <div className="shop_card_cont">
                                       <p className="shopcard_Title" >{shop_card.bookTitle}</p>
                                       <p className="shopcard_Author" >{shop_card.type} | {shop_card.bookAuthor}</p>

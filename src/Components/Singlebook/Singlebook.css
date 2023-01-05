@@ -1,0 +1,8 @@
+.onebook{
+    background-image : url("https://thumbs.dreamstime.com/b/empty-white-vintage-wooden-table-over-blurred-park-nature-backgr-background-banner-product-display-montage-spring-summer-122077285.jpg"); 
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: fixed;
+    min-width: 1024px;
+    min-height: 1024px;
+}

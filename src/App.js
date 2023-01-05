@@ -15,6 +15,7 @@ const  Signin  = lazy(() => import("./Components/Signin/Signin"))
 const  Forgotpassword  = lazy(() => import("./Components/Forgotpassword/Forgotpassword"))
 const  Forgotsuccess = lazy(() => import("./Components/Forgotsuccess/Forgotsuccess"))
 const  Profile = lazy(() => import("./Components/Profile/Profile"))
+const  Singleshop = lazy(() => import("./Components/Singlebook/Singlebook"))
 
 
 
@@ -34,6 +35,7 @@ function App() {
             <Route exact path="/Forgotpassword" element={<Forgotpassword />} />
             <Route exact path="/Forgotsuccess" element={<Forgotsuccess />} />
             <Route exact path="/Profile" element={<Profile />} />
+            <Route exact path="/Singlebook/:bookID" element={<Singleshop />} />
           </Routes>
         </Router>
     </Suspense>

@@ -45,17 +45,6 @@
     display: flex;
     flex-direction: column;
 }
-.psec_btn
-{
-    font-size: large;
-    margin-top: 13px;
-    padding: 12px 0px;
-    border-radius: 4px;
-    background-color: crimson;
-    cursor: pointer;
-    color: #f1f1f1;
-    border: 1px solid crimson;
-}
 .psec_btn:active
 {
     background-color: black;
@@ -88,4 +77,19 @@
 .profile_label
 {
     color: ghostwhite;
+}
+input[type="file"] {
+    display: none;
+}
+.psec_btn {
+    display: inline-block;
+    font-size: large;
+    margin-top: 13px;
+    padding: 12px 0px;
+    border-radius: 4px;
+    background-color: crimson;
+    cursor: pointer;
+    color: #f1f1f1;
+    border: 1px solid crimson;
+    text-align: center;
 }

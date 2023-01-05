@@ -16,7 +16,7 @@ function Profile() {
          <div className='psec'>
             <div className='psec_img_div'>
                 <img src={avatar} alt="" className='psec_img'/>
-                <button className='psec_btn'>Update profile</button>
+                <label class="psec_btn"><input type="file"/>Update profile</label>
             </div>
            <div className='psec_div'>
              <label className='profile_label' >User ID :      <input type="text"  className='psec_input' value={id} readonly/></label>

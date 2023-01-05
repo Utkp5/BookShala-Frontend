@@ -21,6 +21,10 @@ function Singlebook() {
     const [booksbook,setbooksbook] = useState({})
     const{bookID} = useParams();
 
+    //read more
+    const [isExpanded, setExpanded] = useState(false)
+    const { getCollapseProps, getToggleProps } = useCollapse({ isExpanded })
+
     useEffect(() => {
 
         async function fetchData() {

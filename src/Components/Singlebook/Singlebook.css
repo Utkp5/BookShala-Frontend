@@ -71,7 +71,10 @@
 {
   border: 1px solid darkgoldenrod;
 }
-.onebook_main1_author
+.onebook_main1_btn
 {
-
+  padding: 4px 14px;
+  background: darkorange;
+  font-size: large;
+  border-radius: 5px;
 }

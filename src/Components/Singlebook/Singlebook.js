@@ -76,9 +76,9 @@ function Singlebook() {
             <div className='onebook_main1_desc'>
               <p className='onebook_main1_desc_p'><FaScroll size={26} color="darkgrey"/>&nbsp;Book Description</p>
               <p className='onebook_main1_desc_p1'>{booksbook.bookDescription}</p>
-              <p className='onebook_main1_desc_p1' {...getCollapseProps()}>Collapsed content 🙈</p>
+              <p className='onebook_main1_desc_p1' {...getCollapseProps()}>{booksbook.bookDesmore}</p>
               <button className='onebook_main1_btn' {...getToggleProps({ onClick: () => 
-                setExpanded((prevExpanded) => !prevExpanded),})}>{isExpanded ? 'Read less' : 'Read more'}</button>
+                setExpanded((prevExpanded) => !prevExpanded),})}>{isExpanded ? 'Read less' : 'Read more'}&nbsp;🙈</button>
             </div>
             
             

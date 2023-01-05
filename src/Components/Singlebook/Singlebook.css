@@ -1,9 +1,8 @@
 .onebook {
   background-color: black;
   color: lavender;
-  height: 100vh;
-  position: fixed;
-  width: 100vw;
+  height: 100%;
+  overflow: hidden;
 }
 .onebook_main {
   border: 2px solid red;
@@ -17,7 +16,6 @@
   flex-direction: column;
 }
 .onebook_content_div {
-  border: 2px solid yellow;
   color: lavender;
 }
 .onebook_img {
@@ -48,4 +46,32 @@
 .onebook_content_h3
 {
     font-size: 30px;
+}
+.onebook_main1
+{
+  border: 1px solid pink;
+  padding: 30px 50px;
+}
+.onebook_main1_desc{
+  border: none;
+  border-bottom: 2px solid darkcyan;
+  padding-bottom: 30px;
+}
+.onebook_main1_desc_p, .onebook_main1_author_p
+{
+  font-size: xx-large;
+  font-weight: 600;
+  color: darkorange;
+}
+.onebook_main1_desc_p1, .onebook_main1_author_p1
+{
+  font-size: 22px;
+}
+.onebook_main1_desc_more
+{
+  border: 1px solid darkgoldenrod;
+}
+.onebook_main1_author
+{
+
 }

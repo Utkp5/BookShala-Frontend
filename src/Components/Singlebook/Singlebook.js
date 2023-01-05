@@ -12,6 +12,8 @@ import { FaRupeeSign } from "react-icons/fa";
 import { FaRegGrinHearts } from "react-icons/fa";
 import { FaRegThumbsUp } from "react-icons/fa";
 import { FaLanguage } from "react-icons/fa";
+import { FaUserEdit } from "react-icons/fa";
+import { FaScroll } from "react-icons/fa";
 
 
 function Singlebook() {
@@ -66,7 +68,19 @@ function Singlebook() {
        </div>
 
        <div className='onebook_main1'>
-          
+
+            <div className='onebook_main1_desc'>
+              <p className='onebook_main1_desc_p'><FaScroll size={26} color="darkgrey"/>&nbsp;Book Description</p>
+              <p className='onebook_main1_desc_p1'>{booksbook.bookDescription}</p>
+            </div>
+            
+            
+
+            <div className='onebook_main1_author'>
+              <p className='onebook_main1_author_p'><FaUserEdit size={26} color="darkgrey"/>&nbsp;About Author</p>
+              <p className='onebook_main1_author_p1'>{booksbook.authorDescription}</p>
+            </div>
+
        </div>
 
 

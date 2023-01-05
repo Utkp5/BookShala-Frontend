@@ -5,9 +5,8 @@
   overflow: hidden;
 }
 .onebook_main {
-  border: 2px solid red;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   padding: 50px 50px;
 }
 .onebook_img_div {
@@ -49,7 +48,6 @@
 }
 .onebook_main1
 {
-  border: 1px solid pink;
   padding: 30px 50px;
 }
 .onebook_main1_desc{
@@ -67,10 +65,7 @@
 {
   font-size: 22px;
 }
-.onebook_main1_desc_more
-{
-  border: 1px solid darkgoldenrod;
-}
+
 .onebook_main1_btn
 {
   padding: 4px 14px;

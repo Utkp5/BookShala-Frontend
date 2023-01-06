@@ -1,5 +1,32 @@
 table, th, td, tr { 
     width: 1300px;
     border: 2px solid;
-    margin: 0px 30px;
+    margin: 60px 30px;
+    border-collapse: collapse;
+    border-color: black;
+}
+.main_th
+{
+    padding: 18px;
+    font-size: xx-large;
+    color: lavender;
+    background: black;
+}
+th
+{
+    padding: 20px 0px;
+    font-size: large;
+}
+.head
+{
+    background: #00b8a9;
+    color: ghostwhite;
+}
+
+td
+{
+    padding: 10px 10px;
+    text-align: center;
+    font-size: larger;
+    font-weight: 500;
 }

@@ -147,9 +147,9 @@ function Shop() {
 
             <div className="shop_products_div">
                 {
-                  book.map((shop_card,index) => {
+                  book.map((shop_card) => {
                       return (
-                              <div className="shop_card" key={index}>
+                              <div className="shop_card" key={shop_card.id} >
                                   <NavLink><div className="shop_card_div" onClick={() => {
                                     window.location.href="/Singlebook/" + shop_card._id;
                                   }}><img className="shop_card_img" src={shop_card.bookImg} alt="img" /></div></NavLink>

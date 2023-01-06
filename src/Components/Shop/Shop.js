@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Navbar from "../Navbar/Navbar";
 import "./Shop.css";
 import axios from "axios";
+import { useCart } from "react-use-cart";
 
 
 //icons
@@ -11,6 +12,7 @@ import { NavLink } from "react-router-dom";
 
 function Shop() {
 
+  const { addItem } = useCart();
   const [book,setbook] = useState([]);
   
   useEffect(() => {
@@ -160,7 +162,7 @@ function Shop() {
                                       <p>{shop_card.rating}</p>
                                       </div>
                                       <p className="shopcard_Lang" >₹&nbsp;{shop_card.price}</p>
-                                      <button className="shophome_cart_msg">Add to cart</button>
+                                      <button className="shophome_cart_msg" onClick={() => addItem(shop_card)}>Add to cart</button>
                                   </div>
                               </div>
                               )

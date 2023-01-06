@@ -4,6 +4,7 @@ import { useState , useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import useCollapse from 'react-collapsed';
+import { useCart } from 'react-use-cart';
 
 //icons
 import { FaBookOpen } from "react-icons/fa";
@@ -18,6 +19,7 @@ import { FaScroll } from "react-icons/fa";
 
 function Singlebook() {
 
+    const { addItem } = useCart();
     const [booksbook,setbooksbook] = useState({})
     const{bookID} = useParams();
 
@@ -57,7 +59,7 @@ function Singlebook() {
 
             <div className='onebook_img_div'> 
                   <img src={booksbook.bookImg} alt="" className='onebook_img'/>
-                  <button className='onebook_btn'>Add to cart</button>
+                  <button className='onebook_btn' onClick={() => addItem(booksbook)}>Add to cart</button>
             </div>
 
             <div className='onebook_content_div'>

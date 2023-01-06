@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Navbar from "../Navbar/Navbar";
 import "./Shop.css";
 import axios from "axios";
-import { useCart } from "react-use-cart";
+import { CartProvider,useCart } from "react-use-cart";
 
 
 //icons
@@ -12,8 +12,8 @@ import { NavLink } from "react-router-dom";
 
 function Shop() {
 
-  const { addItem } = useCart();
   const [book,setbook] = useState([]);
+  const { addItem } = useCart();
   
   useEffect(() => {
 

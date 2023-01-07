@@ -2,6 +2,7 @@ import React from 'react'
 import Navbar from "../Navbar/Navbar"
 import { useCart } from 'react-use-cart'
 import "./Cart.css"
+import Swal from 'sweetalert2';
 
 function Cart() {
 
@@ -16,6 +17,35 @@ function Cart() {
     emptyCart,
   } = useCart();
  
+  const paymentHandle = async () => {
+
+    Swal.fire({
+      title: 'You have successfully order your book',
+      text: "Kindly proced with the payment for delivery",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      cancelButtonText: 'No,Cancel!',
+      confirmButtonText: 'Yes,Go ahead'
+    }).then((result) => {
+      if (result.isConfirmed) {
+
+        try {
+          
+          const orderUrl = "https://moviebooking-utkarsh.herokuapp.com/api/Payment/orders";
+			    const { data } =  axios.post(orderUrl, { amount: {cartTotal}});
+			    console.log(data);
+			    initPayment(data.data);
+        } catch (error) {
+          
+        }
+
+      }
+    })
+
+  }
+
 
 
   return (
@@ -57,7 +87,7 @@ function Cart() {
             <td><h4>Total price ₹ : {cartTotal}</h4></td>
             <td>
             <button className='cart_clr_btn' onClick={() => emptyCart() }>Clear cart</button>
-            <button className='cart_payment_btn'>Clear Payment</button>
+            <button className='cart_payment_btn' onClick={paymentHandle}>Clear Payment</button>
             </td>
         </tr>
       }

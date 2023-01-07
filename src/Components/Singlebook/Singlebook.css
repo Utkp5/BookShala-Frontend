@@ -66,10 +66,20 @@
   font-size: 22px;
 }
 
+.onebook_main1_author_p1{margin-left: 60px;}
 .onebook_main1_btn
 {
   padding: 4px 14px;
   background: darkorange;
   font-size: large;
   border-radius: 5px;
+}
+.author_div
+{
+display: flex;
+}
+.author_img
+{
+ border-radius: 50%; 
+ width: 160px;
 }

@@ -86,7 +86,10 @@ function Singlebook() {
 
             <div className='onebook_main1_author'>
               <p className='onebook_main1_author_p'><FaUserEdit size={26} color="darkgrey"/>&nbsp;About Author</p>
-              <p className='onebook_main1_author_p1'>{booksbook.authorDescription}</p>
+              <div className='author_div'>
+                  <img src={booksbook.authorImg} alt="" className='author_img'/>
+                  <p className='onebook_main1_author_p1'>{booksbook.authorDescription}</p>
+              </div>
             </div>
 
        </div>

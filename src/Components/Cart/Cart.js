@@ -46,7 +46,7 @@ function Cart() {
                   <td>{item.price}</td>
                   <td>{item.quantity}</td>
                   <td>
-                  <button onClick={() => updateItemQuantity(item.id, item.quantity - 1)}> - </button>
+                  <button onClick={() => updateItemQuantity(item.id, item.quantity - 1)}> - </button>&nbsp;&nbsp;
                   <button onClick={() => updateItemQuantity(item.id, item.quantity + 1)}> + </button>
                   </td>
                   <td><button onClick={() => removeItem(item.id)}>&times;</button></td>

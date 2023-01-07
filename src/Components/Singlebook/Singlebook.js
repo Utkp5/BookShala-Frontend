@@ -4,6 +4,7 @@ import { useState , useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import useCollapse from 'react-collapsed';
+import Footer from "../Footer/Footer"
 
 //icons
 import { FaBookOpen } from "react-icons/fa";
@@ -90,6 +91,7 @@ function Singlebook() {
 
        </div>
 
+       <Footer />
 
     </div>
   )

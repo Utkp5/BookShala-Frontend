@@ -3,7 +3,7 @@ import Navbar from "../Navbar/Navbar";
 import "./Shop.css";
 import axios from "axios";
 import { CartProvider,useCart } from "react-use-cart";
-
+import Footer from "../Footer/Footer"
 
 //icons
 import { IoIosStar } from "react-icons/io";
@@ -41,18 +41,6 @@ function Shop() {
     fetchData();
   }, []);
 
-
-  
-  // async function booksAPI(){
-  //   const response = await axios.get("http://localhost:5000/api/books/getBooks")
-  //   if (response.status === 200) {
-  //     return response.data
-  //   } 
-  // }
-
-  
-  // const finalbookAPI =  booksAPI();
-  // console.log(finalbookAPI);
   
 
   //Filter
@@ -174,6 +162,7 @@ function Shop() {
 
       </div>
 
+      <Footer />
 
 
 

@@ -20,7 +20,8 @@
 }
 .shop_main
 {
-    border: 2px solid ;
+    border: 2px solid;
+    border-bottom: none;
     position: relative;
     
 }

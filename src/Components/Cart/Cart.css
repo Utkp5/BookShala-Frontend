@@ -1,32 +1,61 @@
-table, th, td, tr { 
-    width: 1300px;
-    border: 2px solid;
-    margin: 60px 30px;
-    border-collapse: collapse;
-    border-color: black;
+table,th,td,tr {
+  width: 1300px;
+  border: 2px solid;
+  margin: 60px 30px;
+  border-collapse: collapse;
+  border-color: black;
 }
-.main_th
-{
-    padding: 18px;
-    font-size: xx-large;
-    color: lavender;
-    background: black;
+.main_th {
+  padding: 18px;
+  font-size: xx-large;
+  color: lavender;
+  background: black;
 }
-th
-{
-    padding: 20px 0px;
-    font-size: large;
+th {
+  padding: 20px 0px;
+  font-size: large;
 }
-.head
-{
-    background: #00b8a9;
-    color: ghostwhite;
+.head {
+  background: #00b8a9;
+  color: ghostwhite;
 }
 
-td
-{
-    padding: 10px 10px;
-    text-align: center;
+td {
+  padding: 10px 10px;
+  text-align: center;
+  font-size: larger;
+  font-weight: 500;
+}
+.cart_btn{
+    padding: 3px 13px;
     font-size: larger;
-    font-weight: 500;
+    background: black;
+    color: lavender;
+    border-radius: 4px;
+}
+.cart_btn_remove
+{
+    padding: 4px 20px;
+    font-size: larger;
+    background: crimson;
+    color: lavender;
+    border-radius: 4px;
+    border: 2px solid crimson;
+}
+.cart_clr_btn{
+    padding: 9px 22px;
+    font-size: large;
+    background: green;
+    color: ghostwhite;
+    border: none;
+    border-radius: 4px;
+}
+.cart_payment_btn{
+    padding: 9px 22px;
+    font-size: large;
+    background: #0085b1;
+    color: ghostwhite;
+    border: none;
+    border-radius: 4px;
+    margin-left: 60px;
 }

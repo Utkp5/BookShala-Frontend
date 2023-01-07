@@ -15,16 +15,13 @@ function Cart() {
     removeItem,
     emptyCart,
   } = useCart();
+ 
 
-   if (isEmpty) 
-   {
-    <p>Your cart is empty</p> 
-   }   
 
   return (
+    
     <div>
       <Navbar />
-
       <table>
           <tr>
             <th colSpan={6} className="main_th">Your Cart</th>
@@ -46,15 +43,24 @@ function Cart() {
                   <td>{item.price}</td>
                   <td>{item.quantity}</td>
                   <td>
-                  <button onClick={() => updateItemQuantity(item.id, item.quantity - 1)}> - </button>&nbsp;&nbsp;
-                  <button onClick={() => updateItemQuantity(item.id, item.quantity + 1)}> + </button>
+                  <button className='cart_btn' onClick={() => updateItemQuantity(item.id, item.quantity - 1)}> - </button>&nbsp;&nbsp;
+                  <button className='cart_btn' onClick={() => updateItemQuantity(item.id, item.quantity + 1)}> + </button>
                   </td>
-                  <td><button onClick={() => removeItem(item.id)}>&times;</button></td>
+                  <td><button className='cart_btn_remove' onClick={() => removeItem(item.id)}>&times;</button></td>
                 </tr>
               )
             })
           }
       </table>
+      {!isEmpty && 
+        <tr>
+            <td><h4>Total price ₹ : {cartTotal}</h4></td>
+            <td>
+            <button className='cart_clr_btn' onClick={() => emptyCart() }>Clear cart</button>
+            <button className='cart_payment_btn'>Clear Payment</button>
+            </td>
+        </tr>
+      }
 
     </div>
   )

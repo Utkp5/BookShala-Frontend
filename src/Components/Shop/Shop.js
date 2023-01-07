@@ -139,7 +139,7 @@ function Shop() {
 
             <div className="shop_products_div">
                 {
-                  book.filter((shop_card) => {
+                  book.filter((shop_card) => { //filter 
                     if (filter == "") {
                       return shop_card
                     }
@@ -150,7 +150,7 @@ function Shop() {
                     ){
                       return shop_card
                     }
-                  }).map((shop_card) => {
+                  }).map((shop_card) => {  //map
                       return (
                               <div className="shop_card" key={shop_card.id} >
                                   <NavLink><div className="shop_card_div" onClick={() => {

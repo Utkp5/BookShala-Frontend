@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Navbar from "../Navbar/Navbar";
 import "./Shop.css";
 import axios from "axios";
-import { CartProvider,useCart } from "react-use-cart";
+import { useCart } from "react-use-cart";
 import Footer from "../Footer/Footer"
 
 //icons
@@ -21,8 +21,11 @@ function Shop() {
       auth: localStorage.getItem("token"),
     };
 
+    fetchData();
 
-    async function fetchData() {
+  }, []);
+
+  async function fetchData() {
       try {
         
         const bookApi = (
@@ -37,11 +40,6 @@ function Shop() {
         console.log(error);
       }
     }
-
-    fetchData();
-  }, []);
-
-  
 
   //Filter
 
@@ -80,8 +78,14 @@ function Shop() {
   }
 
 
+  //Search functionality
+  const[filter,setfilter] = useState('')
 
+  const onChangeHandle = (e) => {
+    setfilter(e.target.value);
+  }
 
+  
 
 
   return (
@@ -93,7 +97,7 @@ function Shop() {
       </div>
 
       <div className="shop_main">
-        <input type="search" name="" id="" placeholder="Search here..." className="shop_search"/>
+        <input type="search" name="" id="" placeholder="Search here..." className="shop_search" value={filter}  onChange={onChangeHandle}/>
         
           <div className="shop_flex">
           
@@ -135,7 +139,18 @@ function Shop() {
 
             <div className="shop_products_div">
                 {
-                  book.map((shop_card) => {
+                  book.filter((shop_card) => {
+                    if (filter == "") {
+                      return shop_card
+                    }
+                    else if(shop_card.bookTitle.toLowerCase().includes(filter.toLowerCase()) ||
+                    shop_card.bookAuthor.toLowerCase().includes(filter.toLowerCase()) ||
+                    shop_card.language.toLowerCase().includes(filter.toLowerCase()) ||
+                    shop_card.genres.toLowerCase().includes(filter.toLowerCase())
+                    ){
+                      return shop_card
+                    }
+                  }).map((shop_card) => {
                       return (
                               <div className="shop_card" key={shop_card.id} >
                                   <NavLink><div className="shop_card_div" onClick={() => {

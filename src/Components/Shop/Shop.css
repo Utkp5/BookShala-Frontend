@@ -37,6 +37,9 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    /* border: 1px solid; */
+    width: 100%;
+    align-items: flex-start;
 
 }
 .shop_search

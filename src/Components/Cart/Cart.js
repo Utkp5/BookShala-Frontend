@@ -34,7 +34,7 @@ function Cart() {
       order_id: data._id,
       handler: async (response) => {
         try {
-          const verifyUrl = "https://moviebooking-utkarsh.herokuapp.com/api/Payment/verify";
+          const verifyUrl = "http://localhost:5000/api/payment/verify";
           const { data } = await axios.post(verifyUrl, response);
           console.log(data);
           Swal.fire({
@@ -64,30 +64,10 @@ function Cart() {
 
   const paymentHandle = async () => {
 
-    Swal.fire({
-      title: 'You have successfully order your book',
-      text: "Kindly proced with the payment for delivery",
-      icon: 'warning',
-      showCancelButton: true,
-      confirmButtonColor: '#3085d6',
-      cancelButtonColor: '#d33',
-      cancelButtonText: 'No,Cancel!',
-      confirmButtonText: 'Yes,Go ahead'
-    }).then((result) => {
-      if (result.isConfirmed) {
-
-        try {
-          
-          const orderUrl = "/api/Payment/orders";
-			    const { data } =  axios.post(orderUrl, { amount: {cartTotal}});
-			    console.log(data);
-			    initPayment(data.data);
-        } catch (error) {
-          
-        }
-
-      }
-    })
+    const orderUrl = "http://localhost:5000/api/payment/orders";
+		const { data } = await axios.post(orderUrl, { amount: {cartTotal}});
+		console.log(data);
+		initPayment(data.data);
 
   }
 

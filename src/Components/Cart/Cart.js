@@ -28,11 +28,11 @@ function Cart() {
 
   const initPayment = (data) => {
     const options = {
-      key: process.env.KEY_ID,
-      amount: data.amount,
+      key: 'rzp_test_wozmO8VRB0IT0q',
+      amount: Number(data.amount) * 100,
       currency: data.currency,
       name: bpayment.bookTitle,
-      description: "Pay to Pandit Utkarsh",
+      description: "Pay to Bookshala",
       order_id: data._id,
       handler: async (response) => {
         try {
@@ -64,11 +64,12 @@ function Cart() {
 
 
 
-  const paymentHandle = async () => {
+  const paymentHandle = async (amount) => {
 
     try {
+      const _data = {amount : amount}
       const orderUrl = "http://localhost:5000/api/payment/orders";
-		  const { data } = await axios.post(orderUrl, { amount: bpayment.price});
+		  const { data } = await axios.post(orderUrl, _data);
 		  console.log(data);
 		  initPayment(data.data);
     } catch (error) {
@@ -119,7 +120,7 @@ function Cart() {
             <td><h4>Total price ₹ : {cartTotal}</h4></td>
             <td>
             <button className='cart_clr_btn' onClick={() => emptyCart() }>Clear cart</button>
-            <button className='cart_payment_btn' onClick={paymentHandle}>Clear Payment</button>
+            <button className='cart_payment_btn' onClick={() => paymentHandle(cartTotal)}>Clear Payment</button>
             </td>
         </tr>
       }

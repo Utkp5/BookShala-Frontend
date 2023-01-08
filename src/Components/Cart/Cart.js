@@ -21,7 +21,9 @@ function Cart() {
  
   // payment gatway
 
-  const [bpayment,setbpayment] = useState();
+  const [bpayment,setbpayment] = useState({
+    price : {cartTotal}
+  });
 
 
   const initPayment = (data) => {
@@ -64,10 +66,14 @@ function Cart() {
 
   const paymentHandle = async () => {
 
-    const orderUrl = "http://localhost:5000/api/payment/orders";
-		const { data } = await axios.post(orderUrl, { amount: {cartTotal}});
-		console.log(data);
-		initPayment(data.data);
+    try {
+      const orderUrl = "http://localhost:5000/api/payment/orders";
+		  const { data } = await axios.post(orderUrl, { amount: bpayment.price});
+		  console.log(data);
+		  initPayment(data.data);
+    } catch (error) {
+      console.log(error);
+    }
 
   }
 

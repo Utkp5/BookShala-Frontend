@@ -73,6 +73,7 @@ li a:hover {
 }
 .cartIcon {
   margin-right: 18px;
+  position: relative;
 }
 
 /* dropdown */
@@ -120,6 +121,18 @@ li a:hover {
   display: block;
   color: black;
   padding: 12px 12px;
+  text-decoration: none;
+}
+#cart_num
+{
+  position: relative;
+  top: -31px;
+  font-size: larger;
+  right: 38px;
+  color: lavender;
+}
+.cart
+{
   text-decoration: none;
 }
 .dropdown-content .dropdown_navlink:hover {background-color: #ddd;}

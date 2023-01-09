@@ -6,6 +6,7 @@ import { useState, useEffect } from 'react';
 import logo from "../../Assets/Images/logo.png"
 import { NavLink } from "react-router-dom";
 import { HiOutlineChevronDown } from "react-icons/hi";
+import {useCart} from "react-use-cart"
 import './Navbar.css';
 
 
@@ -45,6 +46,11 @@ function App() {
       window.location.reload();
     }
    }
+
+   const {
+      isEmpty,
+      totalItems,
+   } = useCart();
 
 
 
@@ -95,7 +101,7 @@ function App() {
                   </div>
                 }
 
-                <NavLink to ="/Cart"><HiShoppingCart size={32} color="#F9FFEA" className="cartIcon"/></NavLink>
+                <NavLink to ="/Cart" className="cart"><HiShoppingCart size={32} color="#F9FFEA" className="cartIcon"/>{!isEmpty ? <span id="cart_num">{totalItems}</span> : <span></span>}</NavLink>
 
               </ul>
 

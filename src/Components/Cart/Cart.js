@@ -31,30 +31,11 @@ function Cart() {
       key: 'rzp_test_wozmO8VRB0IT0q',
       amount: Number(data.amount) * 100,
       currency: data.currency,
-      name: bpayment.bookTitle,
+      name: 'Bookshala',
       description: "Pay to Bookshala",
       order_id: data._id,
       handler: async (response) => {
-        try {
-          const verifyUrl = "http://localhost:5000/api/payment/verify";
-          const { data } = await axios.post(verifyUrl, response);
-          console.log(data);
-          Swal.fire({
-            text: 'Your Booking has been Confirmed',
-            imageUrl: 'https://cdn.dribbble.com/users/911154/screenshots/3332845/vfmov3.gif',
-            imageWidth: 300,
-            imageHeight: 200,
-            imageAlt: 'Custom image',
-            confirmButtonColor: '#3085d6',
-            confirmButtonText: 'OK'
-          }).then((result) => {
-            if (result.isConfirmed) {
-              window.location.href = "/";
-            }
-          })
-        } catch (error) {
-          console.log(error);
-        }
+        console.log(response,"5");
       },
     };
     const rzp1 = new window.Razorpay(options);

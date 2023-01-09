@@ -20,7 +20,7 @@ function Signup() {
 
     const user = {firstName,lastName,userEmail,password,confirmPassword};
 
-    await axios.post("http://localhost:5000/api/Signup",user).then(function (response) {
+    await axios.post("https://busy-gray-dibbler-wear.cyclic.app/api/Signup",user).then(function (response) {
     
         if (response.data) {
           console.log(`user siginup successfully`);

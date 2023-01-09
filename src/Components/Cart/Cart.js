@@ -40,7 +40,7 @@ function Cart() {
         // console.log(response.razorpay_order_id);
         // console.log(response.razorpay_signature)
         try {
-          const verifyUrl = "https://moviebooking-utkarsh.herokuapp.com/api/Payment/verify";
+          const verifyUrl = "https://busy-gray-dibbler-wear.cyclic.app/api/Payment/verify";
           const { data } = await axios.post(verifyUrl, response);
           console.log(data);
           Swal.fire({

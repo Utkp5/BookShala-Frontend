@@ -29,7 +29,7 @@ function Cart() {
   const initPayment = (data) => {
     const options = {
       key: 'rzp_test_wozmO8VRB0IT0q',
-      amount: Number(data.amount) * 100,
+      amount: Number(data.amount),
       currency: data.currency,
       name: 'Bookshala',
       description: "Pay to Bookshala",

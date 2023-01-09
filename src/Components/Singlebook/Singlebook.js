@@ -5,6 +5,8 @@ import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import useCollapse from 'react-collapsed';
 import Footer from "../Footer/Footer"
+import Swal from 'sweetalert2';
+
 
 //icons
 import { FaBookOpen } from "react-icons/fa";
@@ -20,6 +22,7 @@ import { FaScroll } from "react-icons/fa";
 function Singlebook() {
 
     const [booksbook,setbooksbook] = useState({})
+    const [disable, setDisable] = useState(false);
     const{bookID} = useParams();
 
     //read more
@@ -31,23 +34,48 @@ function Singlebook() {
         async function fetchData() {
             
             try {
-                
                 const data = (
                     await axios.get(`https://busy-gray-dibbler-wear.cyclic.app/api/books/findbook/${bookID}`,{})
                     ).data
-                
                 setbooksbook(data);
                 console.log(data);
-
-
             } catch (error) {
                 console.log(error);
             }
-
         }
-
         fetchData();
     },[])
+
+
+    async function handleBooking()
+      {
+
+          const userId = {id : localStorage.getItem("userid")}
+          console.log(userId);
+          await axios.post(`https://busy-gray-dibbler-wear.cyclic.app/api/bookspurchase/${bookID}`,userId).then(function (response)
+      {
+        if(response.data)
+        {
+            Swal.fire({
+              title: 'You have successfully whislist your book',
+              text: "Please go to shop page to add product",
+              icon: 'success',
+              showCancelButton: true,
+              confirmButtonColor: '#3085d6',
+              cancelButtonColor: '#d33',
+              cancelButtonText: 'No,Cancel!',
+              confirmButtonText: 'Yes,Go ahead'
+            }).then((result) => {
+              if (result.isConfirmed) {
+                window.location.href = "/Shop"
+              }
+            })
+        }
+      }).catch(function (error)
+      {
+        console.log(error);
+      })
+  }
 
 
 
@@ -58,7 +86,8 @@ function Singlebook() {
 
             <div className='onebook_img_div'> 
                   <img src={booksbook.bookImg} alt="" className='onebook_img'/>
-                  <button className='onebook_btn'>Add to cart</button>
+                  <button className='onebook_btn'disabled={disable} onClick={() => {handleBooking(); setDisable(true)}}>
+                  Add to cart</button>
             </div>
 
             <div className='onebook_content_div'>

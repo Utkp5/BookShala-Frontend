@@ -30,7 +30,16 @@ function Cart() {
     price : {cartTotal}
   });
 
+  // const booksbook = async() => {
+  //   const userID = {id : localStorage.getItem("userID")}
+  //   await axios.post(`https://busy-gray-dibbler-wear.cyclic.app/api/bookspurchase/${bookid}`,userID).then(function (response) {
+  //   if (response.data) {
+  //     console.log(response);
+  //   }
+  //   })
+  // }
 
+  
   const initPayment = (data) => {
     const options = {
       key: 'rzp_test_wozmO8VRB0IT0q',
@@ -60,19 +69,10 @@ function Cart() {
             if (result.isConfirmed) {
               localStorage.setItem("razorpay_order_id",response.razorpay_order_id);
               localStorage.setItem("razorpay_payment_id",response.razorpay_payment_id);
-              // localStorage.setItem("items",items)
+              // localStorage.setItem("items",{items})
+              emptyCart();
 
-              booksbook();
-
-              const booksbook = async() => {
-                const userID = {id : localStorage.getItem("userID")}
-                await axios.post(`https://busy-gray-dibbler-wear.cyclic.app/api/bookspurchase/${bookid}`,userID).then(
-                  function (response) {
-                if (response.data) {
-                  emptyCart();
-                }
-                })
-              }
+              // booksbook();
 
             }
           })

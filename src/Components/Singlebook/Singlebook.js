@@ -33,7 +33,7 @@ function Singlebook() {
             try {
                 
                 const data = (
-                    await axios.get(`http://localhost:5000/api/books/findbook/${bookID}`,{})
+                    await axios.get(`https://busy-gray-dibbler-wear.cyclic.app/api/books/findbook/${bookID}`,{})
                     ).data
                 
                 setbooksbook(data);

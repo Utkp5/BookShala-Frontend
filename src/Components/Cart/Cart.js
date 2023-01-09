@@ -5,8 +5,13 @@ import "./Cart.css"
 import { useState } from 'react'
 import Swal from 'sweetalert2';
 import axios from 'axios';
+import { useParams } from 'react-router-dom';
+
 
 function Cart() {
+
+  const{bookid} = useParams();
+
 
   const  {
     isEmpty,
@@ -56,7 +61,19 @@ function Cart() {
               localStorage.setItem("razorpay_order_id",response.razorpay_order_id);
               localStorage.setItem("razorpay_payment_id",response.razorpay_payment_id);
               // localStorage.setItem("items",items)
-              emptyCart();
+
+              booksbook();
+
+              const booksbook = async() => {
+                const userID = {id : localStorage.getItem("userID")}
+                await axios.post(`https://busy-gray-dibbler-wear.cyclic.app/api/bookspurchase/${bookid}`,userID).then(
+                  function (response) {
+                if (response.data) {
+                  emptyCart();
+                }
+                })
+              }
+
             }
           })
         } catch (error) {

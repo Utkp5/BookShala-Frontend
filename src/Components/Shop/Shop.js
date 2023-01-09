@@ -29,7 +29,7 @@ function Shop() {
       try {
         
         const bookApi = (
-          await axios.get("http://localhost:5000/api/books/getBooks",{})
+          await axios.get("https://busy-gray-dibbler-wear.cyclic.app/api/books/getBooks",{})
         ).data; //here we have used data bcz we want only data to show in console if dont write then alsi its ok ucantry
 
         setbook(bookApi);

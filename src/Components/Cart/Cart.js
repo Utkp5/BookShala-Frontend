@@ -49,7 +49,7 @@ function Cart() {
 
     try {
       const _data = {amount : amount}
-      const orderUrl = "http://localhost:5000/api/payment/orders";
+      const orderUrl = "https://busy-gray-dibbler-wear.cyclic.app/api/payment/orders";
 		  const { data } = await axios.post(orderUrl, _data);
 		  console.log(data);
 		  initPayment(data.data);

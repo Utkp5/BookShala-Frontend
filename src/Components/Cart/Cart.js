@@ -33,9 +33,12 @@ function Cart() {
       currency: data.currency,
       name: 'Bookshala',
       description: "Pay to Bookshala",
-      order_id: data._id,
+      order_id: data.id,
       handler: async (response) => {
-        console.log(response,"5");
+        // console.log(response,"5");
+        console.log(response.razorpay_payment_id);
+        console.log(response.razorpay_order_id);
+        console.log(response.razorpay_signature)
       },
     };
     const rzp1 = new window.Razorpay(options);

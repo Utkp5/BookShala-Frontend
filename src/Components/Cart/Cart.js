@@ -53,7 +53,9 @@ function Cart() {
             confirmButtonText: 'OK'
           }).then((result) => {
             if (result.isConfirmed) {
-              window.location.href = "/";
+              localStorage.setItem("razorpay_order_id",response.razorpay_order_id);
+              localStorage.setItem("razorpay_payment_id",response.razorpay_payment_id);
+              // localStorage.setItem("items",items)
               emptyCart();
             }
           })

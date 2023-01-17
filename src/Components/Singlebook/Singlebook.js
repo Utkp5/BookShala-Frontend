@@ -50,11 +50,11 @@ function Singlebook() {
     async function handleBooking()
       {
 
-          const userId = {userID : localStorage.getItem("userid")}
-          console.log(userId);
+          const userId = {id : localStorage.getItem("userID")}
+          console.log(userId.firstName);
           await axios.post(`https://busy-gray-dibbler-wear.cyclic.app/api/bookspurchase/${bookID}`,userId).then(function (response)
       {
-        if(response.data)
+        if(response)
         {
             Swal.fire({
               title: 'You have successfully whislist your book',

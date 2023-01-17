@@ -31,8 +31,11 @@ function Singlebook() {
 
     useEffect(() => {
 
+      axios.defaults.headers = {
+        auth: localStorage.getItem("token"),
+      };
+
         async function fetchData() {
-            
             try {
                 const data = (
                     await axios.get(`https://busy-gray-dibbler-wear.cyclic.app/api/books/findbook/${bookID}`,{})

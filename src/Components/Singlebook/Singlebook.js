@@ -51,7 +51,7 @@ function Singlebook() {
       {
 
           const userId = {id : localStorage.getItem("userID")}
-          console.log(userId.firstName);
+          console.log(userId);
           await axios.post(`https://busy-gray-dibbler-wear.cyclic.app/api/bookspurchase/${bookID}`,userId).then(function (response)
       {
         if(response)

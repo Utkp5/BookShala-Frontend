@@ -35,7 +35,7 @@ function App() {
             <Route exact path="/Forgotpassword" element={<Forgotpassword />} />
             <Route exact path="/Forgotsuccess" element={<Forgotsuccess />} />
             <Route exact path="/Profile" element={<Profile />} />
-            <Route exact path="/Singlebook/:bookID" element={<Singleshop />} />
+            <Route exact path="/Singlebook/:bookid" element={<Singleshop />} />
           </Routes>
         </Router>
     </Suspense>

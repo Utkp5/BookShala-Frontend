@@ -23,7 +23,7 @@ function Singlebook() {
 
     const [booksbook,setbooksbook] = useState({})
     const [disable, setDisable] = useState(false);
-    const{bookID} = useParams();
+    const{bookid} = useParams();
 
     //read more
     const [isExpanded, setExpanded] = useState(false)
@@ -38,7 +38,7 @@ function Singlebook() {
         async function fetchData() {
             try {
                 const data = (
-                    await axios.get(`https://busy-gray-dibbler-wear.cyclic.app/api/books/findbook/${bookID}`,{})
+                    await axios.get(`https://busy-gray-dibbler-wear.cyclic.app/api/books/findbook/${bookid}`,{})
                     ).data
                 setbooksbook(data);
                 console.log(data);
@@ -55,7 +55,7 @@ function Singlebook() {
 
           const userId = {id : localStorage.getItem("userID")}
           console.log(userId);
-          await axios.post(`https://busy-gray-dibbler-wear.cyclic.app/api/bookspurchase/${bookID}`,userId).then(function (response)
+          await axios.post(`https://busy-gray-dibbler-wear.cyclic.app/api/bookspurchase/${bookid}`,userId).then(function (response)
       {
         if(response)
         {
